@@ -1,0 +1,501 @@
+[
+    {
+        "section_num": 1,
+        "title": "Short Title, Extension and Commencement",
+        "content": [
+            "1. Short Title, Extension and Commencement: (1)  This   Act   may   be\ncalled \"The Electronic Transactions act,2063 (2008) \".\n(2) This Act shall be deemed to have been commenced  from 24 Bhadra\n2063 ( sep.2, 2006).\n(3) This Act shall extend throughout Nepal and sha ll also apply to\nany person residing anywhere by committing an offen ce in contravention to\nthis Act."
+        ]
+    },
+    {
+        "section_num": 2,
+        "title": "Definitions",
+        "content": [
+            "2. Definitions: Unless the subject or context otherwise requires, i n this Act,-  2(a) \"Asymmetric Crypto System\" means a system that crea tes a secured\nkey-pair consisting of a private key creating a dig ital signature and a\npublic key to verify the digital signature. (b) \"License\" means a license obtained pursuant to Sub- section (3) of\nSection 18. (c) \"Originator\" means a person who generates, stores o r transmits\nelectronic records, and this term also includes a p erson who causes any\nother person to carry out such functions:\nProvided that it shall not include an in termediary. (d) \"Computer\" means an electro-magnetic, optical or ot her high-speed data\nprocessing device or system, which performs logical , arithmetic and\nmemory functions by manipulating electro-magnetic o r optical impulses,\nand also includes  all acts of input, output, proce ssing, storage and\ncomputer software or communication facilities which  are connected or\nrelated to the computer in any computer system or c omputer network. (e) \"Computer Database\" means an information, knowledge  and concept or\npresentation of instructions, which are being prepa red or have already\nbeen prepared in word, image, voice or audio visual  form in a\nformalized manner or which have been produced by a computer,\ncomputer system or computer network, with a view to  use in a\ncomputer, computer system or computer network. (f) \"Computer Network\" means an interrelationship betwe en two or more\nthan two computers having interconnection with each  other or in contact\nof communication.",
+            "(g) \"Computer System\" means a device or a group of devi ces, containing all\ncomputer programmes including input and output supp ort devices,\nelectronic instructions, input and output data that  performs logical,\narithmetic, data storage and retrieval, communicati on including\ncontrolling functions. 3(h) \"Computer Resource\" means a computer, computer syst em, computer\nnetwork, data, computer database or software. (i) \"Subscriber\" means a person who has obtained a cert ificate under Sub-\nsection (3) of Section 31. (j) \"Key Pair\" means a private key in an asymmetric cry pto system and of\npair of public key, interconnected in a mathematics  form with the\nprivate key which has a code to verify digital sign ature by the public key\nto be created from the private key. (k) \"Data\" means the presentation of information, knowl edge, fact and\nconcept or instructions in any form, which are kept  in a formalized\nmanner in a computer system or computer network and  is intended for\nprocessing the same, or processed or stored in a co mputer memory. (l) \"Tribunal\" means the Information Technology Tribuna l formed pursuant\nto section  60. (m) \"Private Key\" means a key of any key pair used to c reate a digital\nsignature. (n) \"Controller\" means the Controller appointed or desi gnated pursuant to\nsection 13.",
+            "(o) \"Digital Signature\" means a signature made in any e lectronic form to be\nincluded in the transformation of electronic record   by a person having a\nnon- transformed initial electronic record and the public key of signatory\nby using a type of asymmetric crypto system that ma y clearly ascertain\nthe following matters:\n(1) Whether or not transformation of electronic re cord was\ncreated by using a type of private key keeping a lo gical consistency with\nthe public key of signatory; and\n(2) Whether or not the initial electronic record h as been\nchanged after the transformation of electronic reco rd. 4(p)  \"Access\" means an opportunity of gaining entry int o, logical,\narithmetical or resources of memory function of any  computer,\ncomputer system or computer network, giving instruc tions to such\nresources or making communication contact with such  resources. (q) \"Appellate Tribunal\" means the Information Technolo gy Appellate\nTribunal formed pursuant to section 66. (r) \"Certificate\" means a Digital Signature Certificate  issued by the\nCertifying Authority under Section 30. (s) \"Certification Practice Statement\" means any statem ent issued by a\nCertifying Authority to specify the practices to be  applied by the\nCertifying Authority while issuing a Digital Signat ure Certificate. (t) \"Certifying Authority\" means a certifying authority  which has obtained\na license to issue a Digital Signature Certificate under Sub-section (3) of\nSection 18. (u) \"Addressee\" means a person receiving the processed electronic record as\nintended by the originator. Provided that it shall not include an intermediary.",
+            "(v) \"Electronic Record\" means the data, record, image o r sound transmitted,\nreceived or stored in an electronic form by generat ing the same through\nany means. (w) \"Electronic Form\" means a form of information trans mitted, received or\nstored by generating the same through the means of magnetic, optical,\ncomputer memory or similar other devices. (x) \"Public Key\" means a key of any key pair used to ve rify digital\nsignature. (y) \"Information\" means the data details of the scripte d texts, images,\nsounds, codes, computer programmes, software and co mputer databases. 5(z) \"Information system\" means a system to generate, pr oduce, transmit,\nreceive, store and display information or to proces s the same by other\nmethod. (aa) Software\" means any specific part of computer syste m such as system\nsoftware and application software having the capaci ty for operating\ncomputer hardware. (ab) \"Computer Accessory\" means a technology such as com puter resource,\nthe information used by any institution in its busi ness, a software-like\nitem produced or purchased by such an institution, hardware and\ncomputer network. (ac) \"Government Authority\" means a Ministry, Secretaria t, Department of\nGovernment of Nepal or the Offices thereunder, Cons titutional Body or\nthe Offices thereunder, Court or Tribunal or Office  of the Nepal Army\nand it shall also includes other Offices of the sim ilar nature.",
+            "(ad) \"Public Institution\" means the following institutio ns:-\n(1)  A company, bank or board whether fully or part ially owned or\ncontrolled by Government of Nepal , or a Commission  agency,\nauthority, corporation, enterprise board, centre, c ouncil and other\ncorporate body of the similar nature established by  Government\nof Nepal pursuant to the laws prevailing. (2)  A university, school, research centre, and oth er similar academic\nor educational institutions operated by Government of Nepal or\nwhich have been receiving a full or partial grant f rom\nGovernment of Nepal,\n(3)  The Local Bodies formed under the Local Self-G overnance Act,\n1998 (2055 B.S);\n(4)  The Institutions run on the loan, grant or gua rantee of\nGovernment of Nepal;  6(5)  The Institution which is fully or partially ow ned or controlled by\nthe institution referred to in sub-Clauses (1), (2) , (3) or (4) or\nwhich receiving grant from such institution;\n(6)  Any other Institutions prescribed by Governmen t of Nepal as a\npublic institution by a notification published in t he Nepal\nGazette. (ae) \u201cPrescribed\u201d or \u201cAs prescribed\u201d means prescribed or  as prescribed in\nRules framed under this Act. Chapter - 2\nProvisions Relating to Electronic Record and Digita l Signature"
+        ]
+    },
+    {
+        "section_num": 3,
+        "title": "Authencity of Electronic Record",
+        "content": [
+            "3. Authencity of Electronic Record: (1)    Any subscriber may, subject to the\nprovisions of this section, authenticate to any ele ctronic record by his/her\npersonal digital signature.\n(2) While authenticating the electronic record purs uant to Sub-\nsection (1), an act of transforming such electronic  record to other electronic\nrecord shall be effected by the use of asymmetric c rypto system and hash\nfunction.\nExplanation : For the purpose of this section, \"hash function\" means the acts of\nmapping of algorithm or translating of a sequence o f bits into another,\ngenerally smaller, set yielding the same hash resul t from any record in the same\nform while executing the algorithm each and every t ime by using the same\nrecord as an input, infeasible to derive or reconst ruct any record from the hash\nresult produced by the algorithm  from the computat ion point of view, and\nmaking the two records, which produce  the same has h result by using the\nalgorithm, computationally infeasible to derive.\n(3)  Any person may verify the electronic record by  using the public\nkey of the subscriber.  74.  Legal Recognition of Electronic Reco rd:  Where the prevailing law\nrequires any information, documents, records or any  other matters to be kept in\nwritten or printed typewritten form, then, if such information, document, record\nor the matter is maintained in an electronic form b y fulfilling the procedures as\nstipulated in this Act or the Rules made hereunder,  such electronic record shall\nalso have legal validity."
+        ]
+    },
+    {
+        "section_num": 5,
+        "title": "Legal Recognition of Digital Signatur e",
+        "content": [
+            "5. Legal Recognition of Digital Signatur e: Where the prevailing law requires\nany information, document, record or any other matt ers to be certified by\naffixing signature or any document to be signed by any person; then, if such\ninformation, documents, records or matters are cert ified by the digital signature\nafter fulfilling the procedures as stipulated in th is Act or the Rules made\nhereunder, such digital signature shall also have l egal validity."
+        ]
+    },
+    {
+        "section_num": 6,
+        "title": "Electronic Records to be Kept Safely",
+        "content": [
+            "6. Electronic Records to be Kept Safely: Where the prevailing law requires\nany information, document or record to be kept safe ly for any specific period of\ntime and if such information, document or record ar e kept safely in an\nelectronic form, by fulfilling the following condit ion,, such information,\ndocument or record shall have legal validity if tha t is,-\n(a) kept in an accessible condition making available fo r a subsequent\nreference,\n(b)  kept safely in the format that can be demonstrated  subject to presenting\nagain exactly in the same format in which they were  originally generated\nand transmitted or received or stored,\n(c) kept making the details available by which the orig in, destination and\ntransmission or date and time of receipt can be ide ntified,\nProvided that the provision of this Clause shall no t be applied in regard to any\ninformation to be generated automatically for the p urpose of transmitting or\nreceiving any record. 7.",
+            "Electronic Record May Fulfill the Requirement of Su bmission of any\nOriginal Document :  Where the prevailing law requires that any record s hall  8have to be submitted or retained in its main or ori ginal form or kept safely,\nthen, such requirement shall, if the following term s are fulfilled, be deemed to\nhave been satisfied by the electronic records:\n(a)  If there exits a ground as prescribed that can  be believed that any type of\nchange is not made in such record by any means from  the fist time of its\ngeneration in electronics form,\n(b)  If such record is of the nature where there is  a compulsion of submitting\nsuch document to any person it could be clearly sho wn to such a person\nto whom it requires to do so."
+        ]
+    },
+    {
+        "section_num": 8,
+        "title": "Secured Electronic Rec ords",
+        "content": [
+            "8. Secured Electronic Rec ords: If the verification has been made as prescribed\nin connection with the matter as to whether or not any type of changes are\nmade into the electronic records generated with the  application of security\nprocedures as prescribed, such electronic records s hall be deemed to be a\nsecured electronic records."
+        ]
+    },
+    {
+        "section_num": 9,
+        "title": "Secured Digital Signature",
+        "content": [
+            "9. Secured Digital Signature: Where any digital signature made in electronic\nrecord has been examined in a manner as prescribed with the application of\nsuch security procedure as prescribed, then, such d igital signature shall be\ndeemed to be a secured digital signature.\nChapter - 3\nProvision Relating to Dispatch, Receipt and Acknowl edgement of\nElectronic Records"
+        ]
+    },
+    {
+        "section_num": 10,
+        "title": "Electronic Record to be Attributed to Orig inator",
+        "content": [
+            "10. Electronic Record to be Attributed to Orig inator: (1) Any specific\nelectronic record shall, in case of any of the foll owing conditions, be attributed\nto the originator:\n(a)  If such an electronic record was transmitted b y the originator\nhim/herself,  9(b)  If such an electronic record was transmitted b y a person who had\nthe authority to act on behalf   of the originator in respect of such\nan electronic record,\n(c)  Such an electronic record was transmitted thro ugh any\ninformation system that was programmed by the origi nator or on\nbehalf of the originator to operate automatically.\n(2)  If any condition exists as prescribed in resp ect of electronic\nrecord transmitted pursuant to Sub-section (1), the  addressee shall assume that\nsuch an electronic record is attributed to any part icular originator and shall\nhave the authority to act thereon accordingly."
+        ]
+    },
+    {
+        "section_num": 11,
+        "title": "Procedure of Receipt and Acknowledgement of Electro nic Record",
+        "content": [
+            "11. Procedure of Receipt and Acknowledgement of Electro nic Record: \n(1) Where the originator requests the addressee to transmit the\nacknowledgement or receipt of electronic record at the time of  or before the\ndispatch of such electronic record or where there i s an agreement between the\noriginator and addressee to transmit the acknowledg ement or receipt of such an\nelectronic record, then, the provisions of Sub-sect ions (2), (3) and (4) shall be\napplied in relation to the receipt and acknowledgem ent of such an electronic\nrecord. (2)  Where there is no agreement between the origi nator and\naddressee that information or acknowledgement of re ceipt of electronic record\nis to be given in a particular format or by a parti cular manner, such an\ninformation or receipt may be given as the followin g:-\n(a)  by automated or any other means of  communicat ion by the\naddressee,\n(b)  by any conduct of the addressee sufficient to indicate that the\noriginator has received electronic record. (3)  Where the originator has stipulated in relati on to any electronic\nrecord that such an electronic record shall be bind ing on him/her only after the\nreceipt of information or acknowledgement of receip t of such electronic record  10 from the addressee, then, unless the information or  acknowledgement of receipt\nof such an electronic record has been so received f rom addressee, the electronic\nrecord shall not be deemed to have been transmitted  by the originator.",
+            "(4)  Where the originator has not stipulated that the electronic record\nshall be binding only on receipt of such acknowledg ement, and where the\noriginator and addressee have not agreed upon or ha ve not specified any time\nfor acknowledgement of such receipt of electronic r ecord, then, the originator\nshall have to receive such acknowledgement of recei pt of such an electronic\nrecord from addressee within a specified time as pr escribed. If such\nacknowledgement of receipt is not received from add ressee, then, such an\nelectronic record shall be deemed to have not been transmitted by the\noriginator. (5)  Other procedures of receipt of acknowledgemen t of electronic\nrecord shall be as prescribed."
+        ]
+    },
+    {
+        "section_num": 12,
+        "title": "Time and Place of Dispatch and Receipt of Electroni c Record",
+        "content": [
+            "12. Time and Place of Dispatch and Receipt of Electroni c Record: (1)\nSave as otherwise agreed between the originator and  the addressee, the dispatch\nof an electronic record occurs when it enters into an information system outside\nthe control of the originator.\n(2)  Save as otherwise agreed between the originato r and the\naddressee, the time of receipt of an electronic rec ord shall be determined as\nprescribed.\n(3) Save as otherwise agreed between the originator  and the\naddressee, an electronic record shall be deemed to have been dispatched from\nthe place where the originator has his/her place of  business and shall be\ndeemed to have been received at the place where the  addressee has his/her\nplace of business.\nExplanation : For the purpose of this Sub-section \"the place of  business\"\nmeans:  11 (a)  In case the originator or the addressee has mo re than one place of\nbusiness, the place of business means the place whe re the concerned\nbusiness shall be operated\n(b)  If the originator or the addressee does not ha ve a place of business, their\nplace of residence shall be considered their place of business.\nChapter 4\nProvisions Relating to Controller and Certifying Au thority:"
+        ]
+    },
+    {
+        "section_num": 13,
+        "title": "Appointment of the Controller and other Employe es",
+        "content": [
+            "13. Appointment of the Controller and other Employe es: (1)\nGovernment of Nepal may, by notification in the Ne pal Gazette, designate  any\nGovernment  officer or appoint any person who has qualifications as\nprescribed in the office of the Controller.\n(2)  Government of Nepal may, in order to assist the Controller\nto perform his/her functions to be performed under this Act, appoint or assign a\nDeputy Controller and other employees as required. The employees so\nappointed or assigned shall perform their functions  under the general direction\nand control of the Controller."
+        ]
+    },
+    {
+        "section_num": 14,
+        "title": "Functions, Duties and Powers of the Controller",
+        "content": [
+            "14. Functions, Duties and Powers of the Controller: \nThe functions, duties and powers of the controller shall be as follows:-\n(a)  To issue a license to the certifying Authority ,\n(b)  To exercise the supervision and monitoring ove r the activities of\nCertifying Authority,\n(c)  To fix the standards to be maintained by certi fying authority in respect\nto the verification of digital signature,\n(d)  To specify the conditions to be complied with by the certifying authority\nin operating his/her business,\n(e)  To specify the format of the certificate and c ontents to be included\ntherein,  12 (f)  To specify the procedures to be followed by th e certifying authority\nwhile conducting his/her dealings with the subscrib ers,\n(g)  To maintain a record of information disclosed by the certifying authority\nunder this act and to make provision of computer da tabase accessible to\npublic and to update   such database,\n(h)  To perform such other functions as prescribed."
+        ]
+    },
+    {
+        "section_num": 15,
+        "title": "License to be obtain ed",
+        "content": [
+            "15. License to be obtain ed: No person shall perform or cause to be performed\nthe functions of a certifying authority without ob taining a license under this\nAct."
+        ]
+    },
+    {
+        "section_num": 16,
+        "title": "Application to be submitted for a License",
+        "content": [
+            "16. Application to be submitted for a License: (1) Any person willing to\nwork as Certifying Authority by issuing a certifica te under this Act and who\nhas the qualifications as prescribed shall have to submit an application to the\ncontroller in a format as prescribed accompanied by  a fee as prescribed for\nobtaining a license for the certification.\n(2) The applicant applying under Sub-section (1) sh all also attach the\nfollowing documents:\n(a)  Details regarding  certification,\n(b)  Documents to prove the identification and veri fication of the\napplicant,\n(c)  Statements specifying the financial resources,  human resources and\nother necessary facilities,\n(d)  Such other documents as prescribed.\n(3)  The controller may, if he/she thinks necessary , ask the applicant\nto serve additional documents and details in connec tion to examine the\nappropriation of the applicant as to perform the fu nction of Certifying\nAuthority. If the necessary additional documents an d details are so asked, no\nactions shall be taken upon the application of the applicant unless he/she\nsubmits such documents and details.  13 17.  Other Functions and Duties of the Certifying Author ity :\nOther functions and duties of the certifying author ity, other than those to\nissue a certificate, to suspend or revoke it, shall  be as prescribed."
+        ]
+    },
+    {
+        "section_num": 18,
+        "title": "Procedure for granting of a license",
+        "content": [
+            "18. Procedure for granting of a license: (1) The Controller may, on receipt of\nan application under section 16, after considering the qualification of applicant\nand also the documents and statements decide upon w ithin a period of two\nmonths of receipt of such application whether or no t such a person possesses\nthe financial, physical and human resources, and ot her facilities as prescribed\nand whether or not a license should be issued to su ch an applicant and a notice\nto that effect shall be given to him.\n(2)  While deciding upon the issuance of a license under Sub-section\n(1), the Controller may inspect the facilities, fin ancial and physical resources of\nthe applicant.\n(3)  If the Controller decides to issue a license u nder Sub-section (1),\na license in the prescribed format shall be issued to the applicant specifying the\nperiod of validity of the license and also the term s and conditions to be\nfollowed by him.\n(4) Other procedures relating to the issuance of a license shall be as\nprescribed."
+        ]
+    },
+    {
+        "section_num": 19,
+        "title": "Renewal of License",
+        "content": [
+            "19. Renewal of License: (1) A license obtained by Certifying Authority sh all\nhave to renew in each year,\n(2)  A Certifying Authority desirous to renew the l icense under Sub-\nsection (1), shall have to submit and application i n the prescribed format to the\nController at least two months prior to the expiry of the period of validity of\nsuch a license along with such renewal fee as presc ribed,\n(3)  If an application is submitted for renewal, un der Sub-section (2),\nthe Controller shall have to decide whether to rene w the license or not, after\ncompleting the procedures as prescribed one month p rior to the expiry date of\nvalidity of such a license,  14 (4) While deciding to reject to renew a license, th e applicant shall be\ngiven a reasonable opportunity to present his/her s tatement in this regard."
+        ]
+    },
+    {
+        "section_num": 20,
+        "title": "License may be suspended",
+        "content": [
+            "20. License may be suspended: (1) If the documents or statement and statement\nof financial and physical resources submitted by th e certifying authority before\nthe Controller in order to obtain a license are fou nd incorrect or false or the\nconditions to be complied with in course of operati on of business is not\ncomplied with or this Act of the Rules framed hereu nder are found to be\nviolated, the Controller may suspend the license of  the certifying authority till\nthe inquiry in this regard is completed.\nProvided that, Certifying Authority shall be given the reasonable\nopportunity to present his/her defense prior to suc h suspension of a license.\n(2) Other procedures concerning suspension of licen se and other\nprovisions related thereto be as prescribed."
+        ]
+    },
+    {
+        "section_num": 21,
+        "title": "License may be revoked",
+        "content": [
+            "21. License may be revoked: (1) If the controller believes, after completion of\nan inquiry in connection to any activity of Certify ing Authority, made duly, as\nprescribed, that any of the following circumstances  have been occurred, the\nController may revoke a license issued under this A ct, at any time, as he deems\nto be appropriate:\n(a)  If the Certifying Authority fails to comply with t he liabilities under this\nact and the rules made thereunder.\n(b)  If it is found that the Certifying Authority has s ubmitted false or\nincorrect document or statement at the time of subm itting an application\nfor obtaining a license or for its renewal, as the case may be.\n(c) If the Certifying Authority operates business in su ch a manner so that it\nshall make adverse effect to the public interest or  to the national\neconomy,\n(d)  If the Certifying Authority commits any act that i s defined as an offence\nunder this Act or the Rules framed hereunder.  15 (2) The Controller shall, prior to revocation of a license under Sub-\nsection (1), provide a reasonable opportunity to th e Certifying Authority to\npresent his/her defense.\n(3)  Other procedures concerning revocation of a li cense shall be as\nprescribed."
+        ]
+    },
+    {
+        "section_num": 22,
+        "title": "Notice of Suspension or revocation of a License",
+        "content": [
+            "22. Notice of Suspension or revocation of a License: (1) Where a license of\nany Certifying Authority is suspended or revoked un der Section 20 or 21, as\nthe case may be the Controller shall give a written  notice to the Certifying\nAuthority of such suspension or revocation, as the case may be, to such a\ncertifying Authority and shall keep such a notice i n his computer database and\nalso publish in the electronic form.\n(2) The Controller shall publish the notice of susp ension or\nrevocation of a license at least in two daily newsp apers in Nepali and English\nlanguages for two times.\nProvided that, there shall be no effect to any deci sion of suspension or\nrevocation, as the case may be, made by the Control ler under Section 20 or 21,\nmerely on the ground of non-publication of such a n otice."
+        ]
+    },
+    {
+        "section_num": 23,
+        "title": "Recognition to Foreign Certifying Authority may be given",
+        "content": [
+            "23. Recognition to Foreign Certifying Authority may be given: (1) The\nController may with the prior approval of Governmen t of Nepal, and subject to\nsuch conditions and restrictions as may be prescrib ed, by notification in the\nNepal Gazette, recognize any Certifying Authority w ho has obtained a license\nto certify under any foreign law. Any foreign Certi fying Authority so\nrecognized may issue the certificates under this Ac t or the Rules made\nthereunder throughout the Nepal.\n(2) The procedures to be adopted in providing the r ecognition to a\nforeign Certifying Authority as referred to in Sub- section (1), shall be as\nprescribed."
+        ]
+    },
+    {
+        "section_num": 24,
+        "title": "The Controller may issue Orders",
+        "content": [
+            "24. The Controller may issue Orders: (1) The Controller may, in order to\ncause to fulfill the responsibilities in regard to issuance of a certificate by the  16 Certifying Authorities, issue directives, from time  to time.  It shall be a duty of\nthe Certifying Authority to comply with such direct ives."
+        ]
+    },
+    {
+        "section_num": 25,
+        "title": "The Controller may delegate po wer",
+        "content": [
+            "25. The Controller may delegate po wer: The Controller may, in order to\nperform the function to be performed by him/her del egate to any officer\nsubordinate to him/her to exercise all or any of hi s/her powers under this Act or\nthe Rules framed thereunder."
+        ]
+    },
+    {
+        "section_num": 26,
+        "title": "The Controller may investiga te",
+        "content": [
+            "26. The Controller may investiga te: (1)    The Controller may, if he/she\nbelieves that this Act or the Rules framed hereunde r are not complied  with by\nthe Certifying Authority or by other concerned pers on, conduct him/herself or\ncause any officer to conduct necessary investigatio n in that regard.\n(2) It shall be a duty of Certifying Authority to a ssist the\ninvestigations, referred to in Sub-section (1).\n(3) The procedure to be followed by the Controller or any other\nofficer in respect to investigation referred to in Sub-section (1) shall be as\nprescribed."
+        ]
+    },
+    {
+        "section_num": 27,
+        "title": "Performance Audit of Certifying Authority",
+        "content": [
+            "27. Performance Audit of Certifying Authority: (1) The Controller may\nconduct or cause to be conducted performance audit of the Certifying Authority\nin each year.\n(2) The Controller may, for the purpose of the perf ormance audit\nreferred to in Sub-section (1), appoint any recogni zed auditor, who has\nexpertise in computer security or any computer expe rt.\n(3) The Controller shall publish the report of the performance audit\nin the electronic form made under Sub-section (1) b y maintaining in his/her\ncomputer database.\n(4) The qualification of the performance auditor or  remuneration and\nthe procedures of such audit shall be as prescribed .  17 (5) The Controller shall fix the standard of the se rvice of Certifying\nAuthority and publish a notice thereof publicly for  the information to the\npublic-in-general."
+        ]
+    },
+    {
+        "section_num": 28,
+        "title": "The Controller to have the Access to Computers and data",
+        "content": [
+            "28. The Controller to have the Access to Computers and data: (1)  The\nController shall, if there is a reasonable ground t o suspect that provision of this\nAct and Rules framed hereunder has been violated, h ave the power to have the\naccess to any computer system, apparatus, devices, data, information system or\nany other materials connected with such system.\n(2) The Controller may, for the purpose of Sub-sect ion (1), issue\nnecessary directives to the owner of any computer s ystem, apparatus, device,\ndata, information system or any material connected with such system or to any\nother responsible person to provide technical or ot her cooperation as he/she\ndeems   necessary.\n(3) It shall be the duty of the concerned person to  comply with such\ndirective issued under Sub-section (2)."
+        ]
+    },
+    {
+        "section_num": 29,
+        "title": "Record to be maintained",
+        "content": [
+            "29. Record to be maintained: (1)   The Controller shall maintain records of al l\nCertificates issued under this Act.\n(2) The Controller shall, in order to ensure the pr ivacy and security\nof the digital signatures, perform following functi ons:\n(a) To use Computer Security System,\n(b) To apply security procedures to ensure the privacy and\nintegrity of digital signature,\n(c) To comply with the standard as prescribed,\n(3) The Controller shall maintain and update comput erized data base\nof all public keys in a computer system.\n(4) For the purpose of verification of Digital Sign ature, the\nController shall make available a public key to any  person requesting for such a\nkey.  18 Chapter-5\nProvisions Relating to Digital Signature and Certif icates"
+        ]
+    },
+    {
+        "section_num": 30,
+        "title": "Certifying Authority may issue a Certificate",
+        "content": [
+            "30. Certifying Authority may issue a Certificate: Only a licensed or\nrecognized Certifying Authority under this Act may issue a Digital Signature\nCertificate."
+        ]
+    },
+    {
+        "section_num": 31,
+        "title": "Apply to obtain a Certifi cate",
+        "content": [
+            "31. Apply to obtain a Certifi cate: (1) Any person desirous to obtain Digital\nSignature Certificate may apply to the Certifying A uthority in such a format\nalong with such fee and other statements as prescri bed.\n(2) On receipt of an application under Sub-section (1), the Certifying\nAuthority shall have to decide whether to issue or not a certificate to the\napplicant within one month of such application so r eceived.\n(3) The Certifying Authority shall, if it decides t o issue a certificate\nunder Sub-section (2), issue a Digital Signature Ce rtificate within seven days\naffixing his signature in a prescribed format with the inclusion of such\nstatements as prescribe and if it decides to reject  to issue such certificate, the\napplicant shall be notified the reasons for rejecti on within seven days."
+        ]
+    },
+    {
+        "section_num": 32,
+        "title": "Certificate may be suspended",
+        "content": [
+            "32. Certificate may be suspended: (1) Certifying Authority may suspend the\nCertificate in following circumstances:\n(d) If the subscriber obtaining the certificate or any person\nauthorized to act on behalf of such a subscriber, r equests to\nsuspend the certificate.\n(e) If it is found necessary to suspend the certificate  that\ncontravenes public interest as prescribed.\n(f) If it is found that significant loss might be cause d to those\npersons who depend on the certificate by the reason  that\nprovisions of this Act or the Rules framed hereunde r were\nnot followed at the time of issuance of the certifi cate, and if  19 the controller instructs to suspend the certificate  having\nspecified the above ground.\n(2) Grounds and procedures for suspension and relea se of the\nsuspended certificates shall be as prescribed."
+        ]
+    },
+    {
+        "section_num": 33,
+        "title": "Certificate may be revoked",
+        "content": [
+            "33. Certificate may be revoked: (1) The Controller or the Certifying Authority\nmay revoke a Certificate in following conditions:\n(g) Where the subscriber or any other person authorized  by him\nrequests to revoke a certificate,\n(h) If it is necessary to revoke in a certificate that contravenes\nthe public interest as prescribed,\n(i) Upon the death of the subscriber,\n(j) Upon the insolvency, winding up or dissolution of t he\ncompany or corporate body under the prevailing laws ,\nwhere the subscriber is a company or a corporate bo dy.\n(k) If it is proved that a requirement for issuance of the\nCertificate was not satisfied.\n(l) If a material fact represented in the certificate i s proved to\nbe false.\n(m) If a key used to generate key pair or security syst em was\ncompromised in a manner that affects materially the\nCertificate's reliability.\n(2)  The procedures to be followed by the Controlle r or Certifying\nAuthority with respect to revocation of a Certifica te shall be as prescribed."
+        ]
+    },
+    {
+        "section_num": 34,
+        "title": "Notice of Suspension or Revocation",
+        "content": [
+            "34. Notice of Suspension or Revocation: (1) Where a Certificate is suspended\nor revoked under sections 32 or 33, the Certifying Authority or the Controller,\nas the case may be, shall publish a public notice t hereof maintaining its record\nin their repository.  20 (2) It shall be the responsibility of the Certifyin g Authority or the\nController, as the case may be, to communicate the subscribers as soon as\npossible on suspension or revocation Certificates.\nChapter-6\nFunctions, Duties and Rights of Subscriber"
+        ]
+    },
+    {
+        "section_num": 35,
+        "title": "To Generate Key pair",
+        "content": [
+            "35. To Generate Key pair: (1) Where any Certificate issued by the Certifying\nAuthority and accepted by subscriber, consisting of  a public key which\ncorresponds to the key pair and to be listed in suc h Certificate and if such key\npair is supposed to be generated by the subscriber only, then the subscriber\nshall generate such key pair by applying the secure d asymmetric crypto system.\n(2) Notwithstanding anything contained in Sub-secti on (1), if a\nCertifying Authority and the subscriber have conclu ded an agreement or the\nCertifying Authority has accepted any specific syst em regarding the security\nsystem to be used to generate the key pair, then, i t shall be the duty of\nsubscriber to apply the security system as specifie d in agreement or accepted\nby the Certifying Authority."
+        ]
+    },
+    {
+        "section_num": 36,
+        "title": "To Accept a Certificate",
+        "content": [
+            "36. To Accept a Certificate: (1) The certificate shall be deemed to have been\naccepted by the subscriber in the following conditi ons:\n(n) If he publishes such a certificate or authorizes to  publish to\none or more persons, or\n(o) If there exists any ground of his acceptance to suc h\ncertificate which may cause to believe it.\n(2)   If the certificate is accepted it shall be de emed that the subscriber,\nby that reason, has guaranteed to all who reasonabl y rely on the information\ncontained in the certificate that-\n(a) The subscriber holds the private key corresponding to the  public\nkey and is entitled to hold the same,  21 (b) All representations and information made by the sub scriber to the\nCertifying  Authority in course of issuance of the certificate are\ntrue and correct and all facts relevant to the info rmation\ncontained in the certificate are true, and\n(c) All information mentioned in the certificate is, to  the best\nknowledge of subscriber, is true and correct."
+        ]
+    },
+    {
+        "section_num": 37,
+        "title": "To retain the private key in a secured manner",
+        "content": [
+            "37. To retain the private key in a secured manner: (1) Every subscriber shall\nexercise reasonable care to retain control of the p rivate key corresponding to\nthe public key listed in the Certificate and adopt all measures to prevent its\ndisclosure to a person not authorized to affix the digital signature of subscriber.\n(2) If the private key has been disclosed or compro mised by any\nreason whatsoever, then, the subscriber shall commu nicate the same without\nany delay to the Certifying Authority and on receip t of such information the\nCertifying Authority shall immediately suspend such  a Certificate.\n(3) If a certificate is suspended under this Act, i t shall be a duty of\nthe subscriber to retain the private key under this  section in a safe manner\nthroughout the duration of such suspension of Certi ficate."
+        ]
+    },
+    {
+        "section_num": 38,
+        "title": "To Deposit the Private Key to the Controller",
+        "content": [
+            "38. To Deposit the Private Key to the Controller: (1)  If the Controller\nthinks, in order to protect the sovereignty or inte grity of Nepal, to maintain the\nfriendly relations with friendly countries, to main tain the law and order, to\nprevent from committing of any offence under the la ws prevailing, and or in\nother conditions as prescribed, necessary to issue an order to any subscriber to\ndeposit the private key to him/her specifying reaso n there for, such a subscriber\nshall immediately deposit the private key to the Co ntroller.\n(2) The controller shall not inform any unauthori zed person about the\nprivate key deposited as per sub section (1).  22\nChapter-7\nElectronic Record and Government use of Digital Sig nature"
+        ]
+    },
+    {
+        "section_num": 39,
+        "title": "Government Documents may be published in electronic  form",
+        "content": [
+            "39. Government Documents may be published in electronic  form: (1)\nGovernment of Nepal may also publish ordinance, Act , Rules Bye-laws,\nFormation Orders or notifications or any other matt ers in the electronic form\nwhich are published in the Nepal Gazette under the prevailing laws.\n(2) Where the prevailing law provides for the filin g of any form,\napplication or any other document or any record to be generated or retained or\nsecured and or any license or permit or approval or  certificate to be issued or\nprovided or any payment to be made in any Governmen t agency, or public\nentity or in any bank or financial institution oper ating business within the\nNepal,   it may be filed, generated, retained or secured o r issued or granted in\nelectronic form or payment may be made in electroni c mode of\ncommunication, and, it shall not be denied to provi de the legal validity to such\nform, application, document record, license, permit  or approval, certificate or\npayment on the ground of the use of electronic form  or electronic\ncommunication mode."
+        ]
+    },
+    {
+        "section_num": 40,
+        "title": "To Accept the Document in Electronic Form",
+        "content": [
+            "40. To Accept the Document in Electronic Form: (1)    Government agency\nor public entity or bank or financial institutions operating business within the\nNepal may also accept any document and payment to b e submitted or paid to\nthem under the prevailing law in electronic form or  through any electronic\nmode and if such documents and submitted or payment  is made, as the case\nmay be, it shall not be denied to grant legal recog nition merely on the ground\nthat it was accepted electronic form or through any  electronic mode.\n(2) Notwithstanding anything contained in Sub-secti on (1) no\nGovernment agency or public entity or bank of finan cial institution operating\nbusiness within the Nepal shall, except in the cond itions as prescribed and\ngovernment agencies as prescribed, be compelled to  accept any document or  23 payment in electronic form, and such an agency or i nstitution shall, except in\nthe conditions and agency as prescribed, not compel  to any other persons to\naccept any document in electronic form or the payme nt through any electronic\nform.\n(3) For the purpose of Sub-section (1), the provisi on relating to the\nprocedure, process and format to be followed shall as prescribed."
+        ]
+    },
+    {
+        "section_num": 41,
+        "title": "Use of Digital Signature in Government Offices",
+        "content": [
+            "41. Use of Digital Signature in Government Offices: (1)   Where it is\nrequired that the concerned person shall have to af fix his/her signature in any\ndocument or record for verification of such documen t or record to be\ntransmitted or issued by any Government agency or p ublic entity or bank or\nfinancial institution operating business within the  Nepal or to be accepted by\nsuch agency or institution then, Government of Nepa l may, if it thinks\nappropriate, make a provision to use digital signat ure instead of such  a\nsignature.\n(2) Notwithstanding anything contained elsewhere in  this Act,\nGovernment of Nepal may, for the purpose of the pro vision made in Sub-\nsection (1), prescribe additional security procedur e for the verification and\nauthentication of such digital signature.\n(3) Provisions regarding the Certifying Authority a nd Digital\nSignature Certificate to be used by the government agency or entity referred to\nin Sub-section (1), shall be as prescribed.\nChapter \u20138\nProvisions Relating to Network Service"
+        ]
+    },
+    {
+        "section_num": 42,
+        "title": "Liability of Network Service Providers",
+        "content": [
+            "42. Liability of Network Service Providers: Intermediaries providing their\nservices as network service providers shall underta ke the following liabilities in\nregard to such service provided by them:\n(a) Liabilities referred to in the agreement made with the subscriber in\nregard to service provision,.  24 (b) Liabilities referred to in the license of network s ervice providers, and,\n(c) Any such other liability as prescribed."
+        ]
+    },
+    {
+        "section_num": 43,
+        "title": "Network Service Provider not to be Liable",
+        "content": [
+            "43. Network Service Provider not to be Liable: Notwithstanding anything\ncontained in Section 42, no network service provide r shall be liable to bear any\ncriminal or civil liability arising from any fact o r statement mentioned or\nincluded in the information or data of the third pa rty made available in\nelectronic form by him/her merely on the ground tha t he/she has made\navailable the access to such information or data.\nProvided that, such a person or institution providi ng network service\nshall not be relieved from such liability, if he/sh e has made available access to\nsuch information or data with the knowledge that an y fact or statement\nmentioned or included in such information or data c ontravene this Act or Rules\nframed hereunder.\nExplanation : For the purpose of this section\" Third Party\" mea ns a net work\nservice provider who provides service as intermedia ry and any person over\nwhom there is no control of the network service pro vider.\nChapter -9\nOffence Relating To Computer"
+        ]
+    },
+    {
+        "section_num": 44,
+        "title": "To Pirate, Destroy or Alter computer source co de",
+        "content": [
+            "44. To Pirate, Destroy or Alter computer source co de: When computer\nsource code is required to be kept as it is positio n for the time being the\nprevailing law, if any person, knowingly or with ma lafide intention, pirates,\ndestroys, alters computer sources code to be used f or any computer, computer\nprogramme, computer system or computer network or c ause, other to do so,\nhe/she shall be liable to the punishment with impri sonment not exceeding three\nyears or with a fine not exceeding two hundred thou sand Rupees or with both.\nExplanation:   For the purpose of this section \"computer source code\" means\nthe listing of programmes, computer command, comput er design and layout\nand programme analysis of the computer resource in any form.  25 45.  Unauthorized Access in Computer Mat erials : If any person with an\nintention to have access in any programme, informat ion or data of any\ncomputer,  uses such a computer without authorizati on of the owner of or the\nperson responsible for such a computer or even in t he case of authorization,\nperforms any act with an intention to have access i n any programme,\ninformation or data contrary to from such authoriza tion, such a person shall be\nliable to the punishment with the fine not exceedin g Two Hundred Thousand\nRupees or with imprisonment not exceeding three yea rs or with both depending\non the seriousness of the offence."
+        ]
+    },
+    {
+        "section_num": 46,
+        "title": "Damage to any Computer and Information Syste m",
+        "content": [
+            "46. Damage to any Computer and Information Syste m: If any person\nknowingly and with a mala fide  intention to cause wrongful loss or damage to\nany institution destroys, damages, deletes, alters,  disrupts any information of\nany computer source by any means or diminishes valu e and utility of such\ninformation or affects it injuriously or causes any  person to carryout such an\nact, such a person shall be liable to the punishmen t with the fine not exceeding\ntwo thousand Rupees and with imprisonment not excee ding three years or with\nboth."
+        ]
+    },
+    {
+        "section_num": 47,
+        "title": "Publication of illegal materials in electronic form",
+        "content": [
+            "47. Publication of illegal materials in electronic form: (1)  If any person\npublishes or displays any material in the electroni c media including computer,\ninternet which are prohibited to publish or display  by the prevailing law or\nwhich may be contrary to the public morality or dec ent behavior or any types\nof materials which may spread hate or jealousy agai nst anyone or which may\njeopardize the harmonious relations subsisting amon g the peoples of various\ncastes, tribes and communities shall be liable to t he punishment with the fine\nnot exceeding One Hundred Thousand Rupees or with t he imprisonment not\nexceeding five years or with both. (2) If any person commit an offence referred to in Sub-section (1)\ntime to time he/she shall be liable to the punishme nt for each time with one and\none half percent of the punishment of the previous punishment. 26 48.",
+            "Confidentiality to Divul ge: Save otherwise provided for in this Act or Rules\nframed hereunder or for in the prevailing law, if a ny person who has an access\nin any record, book, register, correspondence, info rmation, documents or any\nother material under the authority conferred under this Act or Rules framed\nhereunder divulges or causes to divulge confidentia lity of such record, books,\nregisters, correspondence, information, documents o r materials to any\nunauthorized person, he/she shall be liable to the punishment with a fine not\nexceeding Ten Thousands Rupees or with imprisonment  not exceeding two\nyears or with both, depending on the degree of the offence."
+        ]
+    },
+    {
+        "section_num": 49,
+        "title": "To inform False statement",
+        "content": [
+            "49. To inform False statement: If any person with an intention to obtain a\nlicense from Certifying Authority under this Act or  with any other intention\neither to Controller or with an intention to obtain  Digital Signature Certificate\nor with any other intention conceals statement know ingly or lies any statement\nto be submitted to the Certifying Authority any fal se statements  shall be liable\nto the punishment  with a fine not exceeding One Hu ndred Thousands rupees\nor with an imprisonment not exceeding two years or with both."
+        ]
+    },
+    {
+        "section_num": 50,
+        "title": "Submission or Display of False License or Certifica tes",
+        "content": [
+            "50. Submission or Display of False License or Certifica tes: (1)  If any\nperson who works as a Certifying Authority without a license issued by the\nController under this Act, shall be liable to the p unishment with a fine not\nexceeding one hundred thousands Rupees or with an i mprisonment not\nexceeding two years or with both, depending on seri ousness of the offence. (2)  Any person without obtaining a license from th e Certifying\nAuthority publishes a fake license or false stateme nt in regard to license or\nprovides to any person by any other means, shall be  liable to the punishment\nnot exceeding one hundred thousand Rupees in the ca se where the act referred\nto in Sub-section (1) has not been accomplished by such a person. (3)  If any person publishes or otherwise makes ava ilable a certificate\nto any other person by any means knowingly that a c ertificate is not issued by\nthe Certifying Authority referred to in such a cert ificate or the subscriber listed\nin such certificate has not accepted the certificat e or such a certificate is already  27 suspended or revoked, shall be liable to the punish ment with a fine not\nexceeding one hundred thousands Rupees or with an i mprisonment not\nexceeding two years or with both.",
+            "Provided that, if such a certificate suspended or r evoked is published or\nprovided for the purpose of verification of the Dig ital Signature before it was\nsuspended or revoked, it shall not be deemed to hav e been committed an\noffence under this Sub-section."
+        ]
+    },
+    {
+        "section_num": 51,
+        "title": "Non-submission of Prescribed Statements or Document s",
+        "content": [
+            "51. Non-submission of Prescribed Statements or Document s: (1)     If any\nperson responsible to submit any statement, documen t or report to the\nController or Certifying Authority under this Act o r Rules framed hereunder,\nfails to submit such statement, document, or report  within the specified time\nlimit, such a person shall be liable to the punishm ent with a fine not exceeding\nfifty thousands Rupees.\n(2) Any person who fails to maintain duly any book,  register, records\nor account and in a secured manner to be maintained  duly and in a secured\nmanner under this Act or Rules framed hereunder sha ll be liable to the\npunishment with a fine not exceeding fifty thousand s Rupees."
+        ]
+    },
+    {
+        "section_num": 52,
+        "title": "To commit computer fraud",
+        "content": [
+            "52. To commit computer fraud: If any person, with an intention to commit any\nfraud or any other illegal act, creates, publishes or otherwise provides digital\nsignature certificate or acquires benefit from the payment of any bill, balance\namount of any one's account, any inventory or ATM c ard in connivance of or\notherwise by committing any fraud, amount of the fi nancial benefit so acquired\nshall be recovered from the offender and be given t o the person concerned and\nsuch an offender shall be liable to the punishment with a fine not exceeding one\nhundred thousand Rupees or with an imprisonment not  exceeding  two years or\nwith both."
+        ]
+    },
+    {
+        "section_num": 53,
+        "title": "Abetment to commit computer related offence",
+        "content": [
+            "53. Abetment to commit computer related offence: A person who abets\nother to commit an offence relating to computer und er this Act or who attempts\nor is involved in the conspiracy to commit such an offence shall be liable to the  28 punishment with a fine not exceeding fifty thousand  Rupees or with\nimprisonment not exceeding six months or with both,  depending on the degree\nof the offence."
+        ]
+    },
+    {
+        "section_num": 54,
+        "title": "Punishment to the Accomplice",
+        "content": [
+            "54. Punishment to the Accomplice: A person who assists others to commit\nany offence under this Act or acts as accomplice, b y any means shall be liable\nto one half of the punishment for which the princip al is liable."
+        ]
+    },
+    {
+        "section_num": 55,
+        "title": "Punishment in an offence committed outside Nepa l",
+        "content": [
+            "55. Punishment in an offence committed outside Nepa l: Notwithstanding\nanything contained in the prevailing laws, if any p erson commits any act which\nconstitutes an offence under this Act and which inv olves the computer,\ncomputer system or computer network system located in Nepal, even though\nsuch an act is committed while residing outside Nep al, a case may be filed\nagainst such a person and shall be punished accordi ngly."
+        ]
+    },
+    {
+        "section_num": 56,
+        "title": "Confiscation",
+        "content": [
+            "56. Confiscation: Any computer, computer system, floppy, compact dis ks, tape\ndrivers, softwares or any other accessory devices u sed to commit any act\ndeemed to be an offence relating to computer under this Act shall be liable to\nconfiscation."
+        ]
+    },
+    {
+        "section_num": 57,
+        "title": "Offences Committed by a corporate bo dy",
+        "content": [
+            "57. Offences Committed by a corporate bo dy: (1)  If any act is done by a\ncorporate body which deems an offence under this Ac t, such an offence shall\nbe deemed to have been committed by a person who wa s responsible as chief\nfor the operation of the corporate body at the time  of committing such an\noffence.\nProvided that, if the person who was responsible as  a chief for the\noperation of such a corporate body proves that such  an offence was committed\nwithout his/her knowledge or that he/she exercised all reasonable efforts to\nprevent such an offence, he/she shall not be liable  to the guilty.\n(2)  Notwithstanding anything contained in Sub-sect ion (1),  if it is\nproved that any offence under this Act committed by  a corporate body with the\nconsent or in knowledge or by the reason of  neglig ence of a director, manager,\nsecretary or any other responsible person of such c orporate body, such an  29 offence shall be deemed to have been committed by s uch a corporate body and\nby a director, manager, secretary or other responsi ble person of such a\ncorporate body."
+        ]
+    },
+    {
+        "section_num": 58,
+        "title": "Other Punishment",
+        "content": [
+            "58. Other Punishment: If any violation of this Act or Rules framed hereun der\nhas been committed, for which no penalty has been s eparately provided, such a\nviolator shall be liable to the punishment with a f ine not exceeding fifty\nthousand Rupees, or with an imprisonment not exceed ing six months or with\nboth."
+        ]
+    },
+    {
+        "section_num": 59,
+        "title": "No Hindrance to Punish Under the Laws prevaili ng",
+        "content": [
+            "59. No Hindrance to Punish Under the Laws prevaili ng: If any act deemed to be\nan offence under this Act shall also be deemed to b e another offence under the\nlaws prevailing, it shall not be deemed to have bee n hindered by this Act to file\na separate case and punish accordingly.\nChapter-10\nProvisions Relating to Information Technology Tribu nal"
+        ]
+    },
+    {
+        "section_num": 60,
+        "title": "Constitution of a Tribunal",
+        "content": [
+            "60. Constitution of a Tribunal: (1)   Government of Nepal shall, in order to\ninitiate the proceedings and adjudicate the offence s concerning computer as\nreferred to in Chapter -9, constitute a three membe r Information Technology\nTribunal consisting of one member each of law, Info rmation Technology and\nCommerce by notification in the Nepal Gazette from amongst the persons who\nare qualified under section 60.\n(2) The Law Member shall be the chairperson of the Tribunal.\n(3) The Tribunal shall exercise its jurisdiction as  prescribed.\n(4) Any person aggrieved by an order or a decision made by Tribunal\nmay appeal to the Appellate Tribunal within thirty five days from the date of\nsuch order or decision, as the case may be."
+        ]
+    },
+    {
+        "section_num": 61,
+        "title": "Qualification of the Member of the Tribunal",
+        "content": [
+            "61. Qualification of the Member of the Tribunal: (1)   Any person who has\nthe knowledge in information technology and, who is  or who has been or who  30 is qualified to be a judge in the District Court, s hall be eligible to be a law\nmember of the Tribunal. (2) A Nepalese citizen who holds at least master de gree in computer\nscience or information technology and who has at le ast three years experience\nin the field of electronic transactions, informatio n technology or electronic\ncommunication, shall be eligible to be a informatio n technology member of the\nTribunal. (3)   A Nepali citizen who holds at least master de gree in management\nor commerce and who has specialization in  the fiel d of electronic transaction\nand who has at least three years experience in the related field shall be eligible\nto be a commerce member of the Tribunal. 62. Terms of office, remuneration and conditions of ser vice of the\nMember of Tribunal : (1) The term of office of a member of the Tribunal\nshall be of five years and he/she shall be eligible  for reappointment. (2) Remuneration and the terms and conditions of th e service of a\nMember of the Tribunal shall as prescribed. (3) Every Member of the Tribunal shall, before assu ming his/her\noffice, take the oath of his/her office and secrecy  before the Chief Judge of\nAppellate Court in a format and in a manner as pres cribed. 63.",
+            "Circumstances under which office shall be fallen  v acant and filling\nup of vacancy :   (1)  Office of a Member of the Tribunal shall be  fallen\nvacant in the following circumstances:\na) On expiry of terms of office,\nb) On attainment of sixty three years of age. c) On death,\nd) If one tenders resignation,\ne) If one is convicted by a court on any criminal offe nce involving\nmoral turpitude, or  31 f) If it is proved that one has misbehavior or has bec ome\nincompetent to perform one's duty while making an i nquiry by\nGovernment of Nepal on the charge that one has misb ehavior\nagainst one's office or has become incompetent to p erform one's\nduty. Provided that, a Member of the Tribunal charged und er this\nClause shall given a reasonable opportunity to defe nse his/her case. (2) Notwithstanding anything contained in Clause (f ), if the\nlaw member of the Tribunal is a sitting judge, whil e making such an\ninquiry, it shall be done in accordance with the pr evailing law\nconcerning his/her terms of service. (3) The procedure of inquiry, for the purpose of Cl ause (f) of\nSub-section Sub-section (1), shall be as prescribed . (4)  Government of Nepal shall, in case of vacancy of the\noffice of any member of Tribunal under Sub-section (1), fulfill such\nvacancy from among the persons who are qualified un der section 61 for\nremaining term of office of such a member."
+        ]
+    },
+    {
+        "section_num": 64,
+        "title": "Staff of the Tribunal",
+        "content": [
+            "64. Staff of the Tribunal: (1) Government of Nepal shall make available\nnecessary staff to the Tribunal to perform its func tions.\n(2) Other provisions regarding the staff of the Tri bunal shall be as\nprescribed."
+        ]
+    },
+    {
+        "section_num": 65,
+        "title": "Procedures to be followed by the Tribunal",
+        "content": [
+            "65. Procedures to be followed by the Tribunal: The Tribunal shall, while\ninitiating proceedings and adjudicating the case un der section 60, shall follow\nthe procedures as prescribed.\nChapter-11\nProvisions Relating to Information Technology Appel late Tribunal"
+        ]
+    },
+    {
+        "section_num": 66,
+        "title": "Establishment and formation of the Appellate Tribun al",
+        "content": [
+            "66. Establishment and formation of the Appellate Tribun al: (1)\nGovernment of Nepal shall, in order to hear the app eal against the order or the  32 decision made by the Tribunal and to hear the appea l against the decision or\norder made by the Controller or by the Certifying A uthority, as the case may\nbe, under this Act, by notification in the Nepal Ga zette, establish a three\nmember Information Technology Appellate Tribunal co nsisting of one member\neach of law, information technology and commerce fr om among the persons\nwho are qualified under section 67,\n(2) Law Member shall be the chairperson of the Appe llate Tribunal.\n(3) Exercise of the jurisdiction of Appellate Tribu nal shall be as\nprescribed."
+        ]
+    },
+    {
+        "section_num": 67,
+        "title": "Qualification of the Member of Appellate Tribunal",
+        "content": [
+            "67. Qualification of the Member of Appellate Tribunal: (1) A person who\nhas the knowledge in information technology and who  is or who has already\nbeen or who is qualified to be a judge in the Appel late Court shall be eligible to\nbe a law member of the Appellate Tribunal.\n(2) A Nepali citizen who holds at least master degr ee in computer\nscience or information technology and who has at le ast five years experience in\nthe electronic transaction, information technology or electronic communication\nshall be eligible to be an information technology m ember of the Tribunal.\n(3) A Nepali citizen who holds at least master degr ee in management\nor commerce and who has specialization in the field  of electronic transactions\nand who has at least five years experience in the r elevant field, shall be eligible\nto be a commerce member.\n68. Terms of Office, Remuneration and Terms & Condition s of the\nservice of the Member of Appellate Tribunal :  (1) The term of office of\nthe member of the Appellate Tribunal shall be of fi ve years and he/she shall be\neligible for reappointment.\n(2) Remuneration and other terms and conditions of the services of\nthe members of the Appellate Tribunal shall as pres cribed.  33 (3) A member of the Appellate Tribunal shall, befor e assuming\nhis/her office after appointment, take the oath of his/her office and secrecy\nbefore the Chief Justice of the Supreme Court."
+        ]
+    },
+    {
+        "section_num": 69,
+        "title": "Conditions of Vacancy of Office and filling up of s uch Vacancy",
+        "content": [
+            "69. Conditions of Vacancy of Office and filling up of s uch Vacancy: (1)\nOffice of a Member of Appellate Tribunal shall be f allen vacant in the\nfollowing circumstances:\n(a) On expiry of terms of office,\n(b) On attainment of sixty three years age,\n(c) On death,\n(d) If one tenders resignation\n(e) If one is convicted by a court on any criminal offe nce involving\nmoral turpitude, and,\n(f) If it is proved that one has misbehavior or has bec ome\nincompetent to perform one's duty, while making an inquiry by\nGovernment of Nepal on the charge that one has misb ehavior\nagainst one's office or has become incompetent to p erform one's\nduty.\nProvided that, a member of the Appellate Tribunal c harged under this\nClause shall be given a reasonable opportunity to d efense his/her case.\n(2) Notwithstanding anything contained in Clause (f ), if the law\nmember of the Tribunal is a sitting judge, while ma king such an inquiry, it shall\nbe done in accordance with the prevailing law conce rning his/her terms of\nservice.\n(3) The procedure of inquiry, for the purpose of Cl ause (f) of Sub-\nsection (1), shall as prescribed.\n(4) Government of Nepal shall, in case of vacancy o f the office of\nany member of Tribunal under Sub-section (1), fulfi ll such vacancy from  34 amongst the persons who are qualified under section  67 for remaining term of\noffice of such a member."
+        ]
+    },
+    {
+        "section_num": 70,
+        "title": "Staff of the Appellate Tribunal",
+        "content": [
+            "70. Staff of the Appellate Tribunal: (1) Government of Nepal shall make\navailable necessary staff to Appellate Tribunal to perform its functions.\n(2) Other provisions regarding the staff of the App ellate Tribunal\nshall be as prescribed."
+        ]
+    },
+    {
+        "section_num": 71,
+        "title": "Procedures to be followed by the Appellate Tribunal",
+        "content": [
+            "71. Procedures to be followed by the Appellate Tribunal: The Tribunal\nshall, while initiating proceedings and adjudicatin g the appeal filed before it,\nshall follow the procedures as prescribed.\nChapter-12\nMiscellaneous"
+        ]
+    },
+    {
+        "section_num": 72,
+        "title": "Provision may be made by an Agreement",
+        "content": [
+            "72. Provision may be made by an Agreement: The parties involved to the\nwork for creating, transmitting, receiving, storage  or for processing through\nany other means, of any electronic record may make the provision by an\nagreement, not to apply any or all provisions of th e Chapter 3 or to alter some\nof the provisions referred to in the said Chapter i n course of their business and\nmay make the provisions to regulate their activitie s accordingly."
+        ]
+    },
+    {
+        "section_num": 73,
+        "title": "Government of Nepal may issue Dir ectives",
+        "content": [
+            "73. Government of Nepal may issue Dir ectives: Government of Nepal may, in\nregard to the implementation of this Act, issue nec essary directives to the\nController or Certifying Authority, and in such a c ase, it shall be a duty of the\nController or Certifying Authority, as the case may  be, to comply with such\ndirectives."
+        ]
+    },
+    {
+        "section_num": 74,
+        "title": "Time Limitation to file a Complaint",
+        "content": [
+            "74. Time Limitation to file a Complaint: If a violation of this Act or Rules\nframed hereunder has been occurred or if any act de emed to be an offence\nunder this Act has been committed, first informatio n report in regard to such a\nviolation or an offence shall have to file within t hirty five days of the\ninformation on which such a violation has been occu rred or an offence has\nbeen committed.   35 75. Government of Nepal to be a Plainti ff:   (1)  Any case deemed to be an\noffence under this Act shall be initiated by Govern ment of Nepal as plaintiff\nand such a case shall be deemed have been included in Schedule 1 of the\nGovernment Cases Act, 1992 (2049).\n(2) While conducting investigation of a case under Sub-section (1),\nthe police has to take assistance of the Controller  or other concerned expert, as\nthe case may be."
+        ]
+    },
+    {
+        "section_num": 76,
+        "title": "Compensation to be Recovered",
+        "content": [
+            "76. Compensation to be Recovered: If any loss or damage has been caused to\nany person by the reason of offence committed under  this Act, the\ncompensation of such loss or damage shall also be r ecovered from the offender."
+        ]
+    },
+    {
+        "section_num": 77,
+        "title": "This Act shall not Apply",
+        "content": [
+            "77. This Act shall not Apply: (1) Notwithstanding anything contained elsewhere\nin this Act, this Act shall not be applied in the f ollowing matters:\n(a) Negotiable Instruments as referred to in the Negoti able\nInstruments Act, 2034 (1977).\n(b) Deed of will, deed of mortgage, bond, deed of conve yance,\npartition or any such deed related with transfer of  the title in any\nimmovable property,\n(c) Any other document which demonstrates title or owne rship in\nany immovable property,\n(d) Power of Attorney, statement of claim, statement of  defense or\nany such other documents as may be used in courts p roceedings,\n(e) Statement of claim, counter-claim, statement of def ense   or any\nsuch other document as may be submitted in writing in the\nproceedings of any Arbitration,\n(f) Documents as prescribed by the prevailing law that requires not\nto retain in electronic form.  36 (2) Notwithstanding anything contained in Sub-secti on (1)\nGovernment of Nepal may, by notification in the Nep al Gazette, alter the\ndocuments referred to in Sub-section (1)."
+        ]
+    },
+    {
+        "section_num": 78,
+        "title": "Power to Frame R ules",
+        "content": [
+            "78. Power to Frame R ules: Government of Nepal may in order to fulfill the\nobjective of this Act, frame necessary Rules."
+        ]
+    },
+    {
+        "section_num": 79,
+        "title": "To Frame and Enforce the Directive s",
+        "content": [
+            "79. To Frame and Enforce the Directive s: Government of Nepal may, in\norder to achieve the objective of this Act, frame a nd enforce necessary\ndirectives, subject to this Act and Rules framed he reunder.\n80.  Effect of inoperativeness of The Electronic Transac tions Ordinance,\n2063 (2008 ): With the Electronic Transactions Ordinance,  2063 (2008) being\ninoperative, unless a different intention appears, the  inoperativeness shall not,\n(a)   Revive anything not prevailing or existing at  the time, at which\nthe Ordinance became inoperative,\n(b)   Affect the matter in operation as per the Ord inance or anything\nduly done or any punishment suffered there under,\n(c)   Affect any right, privilege, obligation or li ability acquired,\naccrued or incurred under the Ordinance,\n(d)   Affect any penalty, punishment or forfeiture incurred under the\nOrdinance,\n(e)   Affect any action or remedy made or taken in respect of any such\nright, privilege, obligation, liability, penalty o r punishment as\naforesaid; and any such legal proceeding or remedy  may be\ninstituted, continued or enforced as if the Ordina nce were in\nforce."
+        ]
+    }
+]

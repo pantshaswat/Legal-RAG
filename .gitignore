@@ -1,0 +1,9 @@
+venv/
+app/__pycache__/
+app/services/__pycache__/
+app/api/__pycache__/
+
+models/__pycache__/
+.vscode/
+venv/
+qdrant_storage/

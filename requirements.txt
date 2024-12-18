@@ -1,0 +1,14 @@
+ipykernel 
+transformers
+torch
+numpy
+matplotlib
+scikit-learn
+langchain-google-genai
+pypdf
+fastapi
+pydantic
+uvicorn
+qdrant-client
+pymupdf
+# "fastapi[standard]"
