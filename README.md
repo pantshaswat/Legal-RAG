@@ -32,7 +32,7 @@ This project implements a Retrieval-Augmented Generation (RAG) search API for le
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/pantshaswat/rag-server.git
+git clone https://github.com/pantshaswat/Legal-RAG.git
 cd rag-server
 ```
 
@@ -123,6 +123,6 @@ legal-rag-nepal/
 Distributed under the MIT License.
 ## Contact
 
-Your Name - pantshaswat@gmail.com
+Shaswat Pant - pantshaswat@gmail.com
 
-Project Link: [https://github.com/pantshaswat/rag-server](https://github.com/your-username/legal-rag-nepal)
+Project Link: [https://github.com/pantshaswat/Legal-RAG](https://github.com/pantshaswat/Legal-RAG)
