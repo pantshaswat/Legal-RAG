@@ -1,6 +1,6 @@
 ipykernel 
 transformers
-torch
+--extra-index-url https://download.pytorch.org/whl/cpu
 numpy
 matplotlib
 scikit-learn
@@ -11,4 +11,6 @@ pydantic
 uvicorn
 qdrant-client
 pymupdf
+python-dotenv
+sentence-transformers
 # "fastapi[standard]"

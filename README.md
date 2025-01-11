@@ -33,7 +33,7 @@ This project implements a Retrieval-Augmented Generation (RAG) search API for le
 
 ```bash
 git clone https://github.com/pantshaswat/Legal-RAG.git
-cd rag-server
+cd Legal-Rag
 ```
 
 ### 2. Set Up Virtual Environment

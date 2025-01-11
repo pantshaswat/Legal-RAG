@@ -7,3 +7,5 @@ models/__pycache__/
 .vscode/
 venv/
 qdrant_storage/
+.env
+.DS_Store
