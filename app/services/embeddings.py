@@ -105,9 +105,8 @@ def process_json_chunks(json_chunks):
     
     return processed_chunks
 
-def store_embeddings_in_db(filename, collection_name, client, model, tokenizer, tfidf_vectorizer):
+def store_embeddings_in_db(file_path, collection_name, client, model, tokenizer, tfidf_vectorizer):
     try:
-        file_path = os.path.abspath("../data/processed/json/Finance/banking-offence-and-punishment-act.json")
         print(f"Using file path: {file_path}")
         with open(file_path, 'r', encoding='utf-8') as f:
             json_chunks = json.load(f)
@@ -129,7 +128,7 @@ def store_embeddings_in_db(filename, collection_name, client, model, tokenizer, 
     client.create_collection(
         collection_name=collection_name,
         vectors_config=VectorParams(
-            size=1024,  # BERT embedding size
+            size=768,  # BERT embedding size
             distance=Distance.COSINE
         )
     )
