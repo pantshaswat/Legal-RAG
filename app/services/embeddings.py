@@ -1,6 +1,7 @@
 import numpy as np
 import torch
 import json
+import uuid
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.feature_extraction.text import TfidfVectorizer
 from qdrant_client import QdrantClient
@@ -108,10 +109,8 @@ def process_json_chunks(json_chunks):
     
     return processed_chunks
 
-def store_embeddings_in_db(filename, collection_name, client, model, tfidf_vectorizer):
+def store_embeddings_in_db(file_path, collection_name, client, model, tfidf_vectorizer):
     try:
-        
-        file_path = os.path.abspath("../data/processed/json/Finance/Bank_And_Financial_Instituion_Act_2017_-_English_Version_20190311-1.json")
         print(f"Using file path: {file_path}")
         with open(file_path, 'r', encoding='utf-8') as f:
             json_chunks = json.load(f)
@@ -143,7 +142,7 @@ def store_embeddings_in_db(filename, collection_name, client, model, tfidf_vecto
     # Prepare points for Qdrant
     points = [
         PointStruct(
-            id=int(doc['section_num']),
+            id=str(uuid.uuid4()),
             vector=sentence_embedding.tolist(),
             payload={
                 'section_num': doc['section_num'],

@@ -139,4 +139,6 @@ def hybrid_retriever_reranked(
             rerank_weight * result['rerank_score']
         )
     
+    
+    
     return sorted(results, key=lambda x: x['combined_similarity'], reverse=True)[:top_k]

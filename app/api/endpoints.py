@@ -39,9 +39,7 @@ async def get_available_files():
 
 class TestRequest(BaseModel):
  
-    act_name: str
     collection_name: str
-    context_documents: List[str]
     file_name: str
 
 class TestResponse(BaseModel):
@@ -196,3 +194,47 @@ async def evaluate_retrieval_performance(request: EvaluationRequest):
         return EvaluationResponse(mrr=mrr, map=map_score)
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+    
+@router.delete("/documents/{collection_name}")
+async def delete_document(
+    collection_name: str = Path(..., description="Collection name to delete")
+):
+    """
+    Delete a document and its collection.
+    """
+    try:
+       
+        # Delete the collection
+        client.delete_collection(collection_name)  # Use doc_id as collection name
+        # delete file from vectorizer dir
+        
+        # Delete vectorizer file
+        vectorizer_path = os.path.join("vectorizers", f"{collection_name}_vectorizer.pkl")
+        try:
+            if os.path.exists(vectorizer_path):
+                os.remove(vectorizer_path)
+                logger.info(f"Successfully deleted vectorizer file for document {collection_name}")
+            else:
+                logger.warning(f"Vectorizer file not found for document {collection_name}")
+        except OSError as e:
+            logger.error(f"Error deleting vectorizer file: {e}")
+            # Don't fail the whole operation if just the file deletion fails
+            # but include it in the response
+            return {
+                "message": f"Document {collection_name} deleted but failed to remove vectorizer file",
+                "doc_id": collection_name,
+                "warning": f"Failed to delete vectorizer file: {str(e)}"
+            }
+
+        return {
+            "message": f"Document {collection_name} successfully deleted",
+            "doc_id": collection_name,
+            "details": "Removed both collection and vectorizer file"
+        }
+
+    except Exception as e:
+        logger.error(f"Unexpected error in delete_document: {e}")
+        raise HTTPException(
+            status_code=500,
+            detail=f"Error deleting document: {str(e)}"
+        )

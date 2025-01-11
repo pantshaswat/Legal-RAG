@@ -17,7 +17,7 @@ def expand_query(query):
         'https://api.groq.com/openai/v1/chat/completions',
         headers=headers, 
         json={
-            "model": "llama-3.1-8b-instant",
+            "model": "llama-3.3-70b-versatile",
             "messages": [{
                 "role": "system",
                 "content": """You are an AI language model. Your task is to generate five different versions of the given user query
@@ -51,7 +51,7 @@ def get_answer(user_query, top_5_chunks):
         'https://api.groq.com/openai/v1/chat/completions',
         headers=headers, 
         json={
-            "model": "llama-3.1-8b-instant",
+            "model": "llama-3.3-70b-versatile",
             "messages": [{
                 "role": "system",
                 "content": f"""You are an AI language model. Based on this document, you need to generate a short answer to the user query.
