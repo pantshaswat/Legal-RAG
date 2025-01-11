@@ -7,6 +7,7 @@ This project implements a Retrieval-Augmented Generation (RAG) search API for le
 ## Key Features
 
 - Hybrid embedding search (BERT + TF-IDF)
+- Reranker
 - Semantic retrieval of legal document sections
 - FastAPI-based backend
 - Qdrant vector database for efficient document retrieval
@@ -33,7 +34,7 @@ This project implements a Retrieval-Augmented Generation (RAG) search API for le
 
 ```bash
 git clone https://github.com/pantshaswat/Legal-RAG.git
-cd Legal-Rag
+cd Legal-RAG
 ```
 
 ### 2. Set Up Virtual Environment
@@ -59,9 +60,9 @@ docker run -p 6333:6333 -p 6334:6334 \
     qdrant/qdrant
 ```
 
-### 5. Gemini api key configuration
+### 5. Gemini/Gorq api key configuration
 
-Set your gemini api key in the environment.
+Set your gemini api or Groq api key in the .env file.
 
 ## Running the Application
 
@@ -74,6 +75,7 @@ or
 #### Using fast Api
 ```bash
 pip install "fastapi[standard]"
+cd app
 fastapi dev main.py
 ```
 The API will be available at `http://localhost:8000`
@@ -82,6 +84,9 @@ The swagger documentation at `http://localhost:8000/docs`
 
 ### API Endpoints
 
+- `/api/v1/available-files`: gives available file names along with their description
+- `/api/v1/evaluate`: Evaluate retrieval performance using MRR and MAP.
+- `/api/v1/document/{collection_name}`: Delete a document and its collection.
 - `/api/v1/test`: Store embeddings for a specific legal act
 - `/api/v1/query`: Perform semantic search on legal documents
 
@@ -94,12 +99,17 @@ legal-rag-nepal/
 ├── app/
 │   ├── api/
 │   ├── services/
-│   └── ...
+│   |── vectorizers
+|   |── main.py
+|   └── ...
 ├── data/
-│   └── processed/
-│       └── json/
-│           └── Finance/
+│   |── processed/
+│   |    └── json/
+│   |        └── Finance/
+|   └── raw/
+│       └── Finance/
 ├── models/
+├── qdrant_storage
 ├── requirements.txt
 └── README.md
 ```
@@ -107,6 +117,7 @@ legal-rag-nepal/
 ## Data Preparation
 
 - Prepare legal documents as JSON files
+- Works on English converted nepali acts, using file app/act_chunker.py
 - Place JSON files in `data/processed/json/` directory
 - Ensure each document follows the specified JSON structure
 
