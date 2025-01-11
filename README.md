@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This project implements a Retrieval-Augmented Generation (RAG) search API for legal documents in Nepal. It leverages advanced natural language processing techniques to enable semantic search and context-aware querying of legal texts.
+This project implements a Retrieval-Augmented Generation (RAG) search API for legal documents in Nepal. Currently it made for english converted nepali 'ACTS' and aims to be flexible in the near future. It leverages advanced natural language processing techniques to enable semantic search and context-aware querying of legal texts.
 
 ## Key Features
 
