@@ -97,16 +97,21 @@ class QueryResponse(BaseModel):
 @router.post("/query", response_model=QueryResponse)
 async def legal_document_query(      
     collection_name: str,
+    file_name: str,
     question: str = Query(..., description="Question to ask about the document")):
     """
     Query legal documents with retrieval-augmented generation
     """
+    file_path = os.path.abspath(f"../data/processed/json/Finance/{file_name}.json")
+
     try:
        
         results = hybrid_retriever_reranked(
            client=client,
            collection_name=collection_name,
            query=question,
+           top_k= 3,
+           sections_json_path=file_path,
            model=model,
            tfidf_vectorizer=tfidf_vectorizer,
         )

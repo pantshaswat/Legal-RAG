@@ -72,13 +72,17 @@ def hybrid_retriever_reranked(
     query: str,
     model,
     tfidf_vectorizer,
-    top_k: int = 5,
+    sections_json_path: str,
+    top_k: int = 3,
     schemantic_weight: float = 0.7,
     rerank_weight: float = 0.4
 ):
     """
-    Enhanced hybrid retrieval with cross-encoder reranking
+    Enhanced hybrid retrieval with cross-encoder reranking on chunks
+    and final section merging from JSON file
     """
+    import json
+    
     # Initialize cross-encoder for reranking
     reranker = CrossEncoder('cross-encoder/ms-marco-MiniLM-L-6-v2')
     
@@ -123,8 +127,8 @@ def hybrid_retriever_reranked(
             'section_num': result.payload.get('section_num'),
             'title': result.payload.get('title'),
             'content': result.payload.get('content'),
-            'schemantic_similarity': float(result.score),  # Ensure float
-            'tfidf_similarity': float(tfidf_similarity),  # Ensure float
+            'schemantic_similarity': float(result.score),
+            'tfidf_similarity': float(tfidf_similarity),
             'initial_score': initial_score
         })
     
@@ -139,6 +143,44 @@ def hybrid_retriever_reranked(
             rerank_weight * result['rerank_score']
         )
     
+    # Get top_k ranked results
+    ranked_results = sorted(results, key=lambda x: x['combined_similarity'], reverse=True)[:top_k]
     
+    # Load complete sections from JSON
+    with open(sections_json_path, 'r') as f:
+        complete_sections = json.load(f)
     
-    return sorted(results, key=lambda x: x['combined_similarity'], reverse=True)[:top_k]
+    # Convert to dictionary for easy lookup
+    sections_dict = {str(section['section_num']): section for section in complete_sections}
+    
+    # Get unique section numbers from ranked results
+    unique_sections = {str(result['section_num']) for result in ranked_results}
+    
+    # Prepare final results with complete sections
+    final_results = []
+    for section_num in unique_sections:
+        if section_num in sections_dict:
+            # Find the best score for this section from ranked results
+            section_results = [r for r in ranked_results if str(r['section_num']) == section_num]
+            best_result = max(section_results, key=lambda x: x['combined_similarity'])
+            
+            # Get complete section from JSON
+            complete_section = sections_dict[section_num]
+            
+            # Ensure content is a string by joining if it's a list
+            content = complete_section['content']
+            if isinstance(content, list):
+                content = ' '.join(content)
+            
+            final_results.append({
+                'section_num': section_num,
+                'title': complete_section['title'],
+                'content': content,  # Now guaranteed to be a string
+                'schemantic_similarity': best_result['schemantic_similarity'],
+                'tfidf_similarity': best_result['tfidf_similarity'],
+                'combined_similarity': best_result['combined_similarity'],
+                'rerank_score': best_result['rerank_score']
+            })
+    
+    # Sort final results by combined similarity
+    return sorted(final_results, key=lambda x: x['combined_similarity'], reverse=True)
