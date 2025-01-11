@@ -9,7 +9,7 @@ def setup_google_api():
 def get_query_expansion(user_query):
    
     llm = ChatGoogleGenerativeAI(
-        api_key="gemini-api-key",
+        api_key="",
         model="gemini-1.5-pro",
         temperature=0,
         max_tokens=None,
