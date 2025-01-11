@@ -122,6 +122,7 @@ def hybrid_retriever_reranked(
         schemantic_score = result.score
         initial_score = (schemantic_weight * schemantic_score + 
                         (1 - schemantic_weight) * tfidf_similarity)
+        print('initial score:', initial_score)
         
         results.append({
             'section_num': result.payload.get('section_num'),
@@ -134,14 +135,22 @@ def hybrid_retriever_reranked(
     
     # Batch reranking
     rerank_scores = reranker.predict(pairs_to_rerank)
-    
-    # Combine scores
+    print('rerank scores:', rerank_scores)
+# After getting rerank_scores, add normalization
+    min_score = min(rerank_scores)
+    max_score = max(rerank_scores)
+    normalized_rerank_scores = [(score - min_score) / (max_score - min_score) 
+                           if max_score != min_score else 0.5 
+                           for score in rerank_scores]
+    print('normalized rerank scores:', normalized_rerank_scores)
+    # Then use normalized_rerank_scores instead of rerank_scores
     for idx, result in enumerate(results):
-        result['rerank_score'] = rerank_scores[idx]
+        result['rerank_score'] = normalized_rerank_scores[idx]
         result['combined_similarity'] = (
             (1 - rerank_weight) * result['initial_score'] + 
             rerank_weight * result['rerank_score']
         )
+        print('combined similarity:', result['combined_similarity'])
     
     # Get top_k ranked results
     ranked_results = sorted(results, key=lambda x: x['combined_similarity'], reverse=True)[:top_k]
