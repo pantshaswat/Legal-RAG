@@ -7,6 +7,15 @@ from qdrant_client import QdrantClient
 from qdrant_client.models import VectorParams, Distance, PointStruct
 from app.services.vectorizer_manager import VectorizerManager
 import os
+def create_sentence_embeddings(texts: list, model):
+    """
+    Get embeddings using SentenceTransformer
+    """
+    print("Generating embeddings...")
+    embeddings = model.encode(texts, show_progress_bar=True)
+    print("Embeddings generated.")
+    return embeddings
+
 
 def create_bert_embeddings(texts, model, tokenizer):
     """
@@ -47,7 +56,7 @@ def create_tfidf_embeddings(texts: list, tfidf_vectorizer: TfidfVectorizer, coll
     tfidf_matrix = vectorizer_manager.create_vectorizer(collection_name, texts)
     return tfidf_matrix
 
-def create_hybrid_embeddings(chunks, model, tokenizer, tfidf_vectorizer, collection_name: str):
+def create_hybrid_embeddings(chunks, model, tfidf_vectorizer, collection_name: str):
     """
     Creates both BERT and TF-IDF embeddings for each chunk's full text.
     
@@ -59,20 +68,14 @@ def create_hybrid_embeddings(chunks, model, tokenizer, tfidf_vectorizer, collect
     """
     processed_texts = [chunk['full_text'] for chunk in chunks]
     
-    bert_embeddings = []
-    # Create BERT embeddings
-    for text in processed_texts:
-        bert_embedding = create_bert_embeddings(text, model, tokenizer)
-        bert_embeddings.append(bert_embedding.squeeze(0))  # Remove extra dimension
-    
-    # Convert to numpy array with shape (num_chunks, 1024)
-    bert_embeddings = np.array(bert_embeddings)
-    print(f"Created BERT embeddings with shape: {bert_embeddings.shape}")
+    #  create sentenc embeddings
+    sentence_embeddings = create_sentence_embeddings(processed_texts, model)
+    print(f"Created sentence embeddings with shape: {sentence_embeddings.shape}")
     
     # Create TF-IDF embeddings
     tfidf_embeddings = create_tfidf_embeddings(processed_texts, tfidf_vectorizer, collection_name)
 
-    return bert_embeddings, tfidf_embeddings, processed_texts
+    return sentence_embeddings, tfidf_embeddings, processed_texts
 
 
 def process_json_chunks(json_chunks):
@@ -105,8 +108,10 @@ def process_json_chunks(json_chunks):
     
     return processed_chunks
 
-def store_embeddings_in_db(file_path, collection_name, client, model, tokenizer, tfidf_vectorizer):
+def store_embeddings_in_db(filename, collection_name, client, model, tfidf_vectorizer):
     try:
+        
+        file_path = os.path.abspath("../data/processed/json/Finance/Bank_And_Financial_Instituion_Act_2017_-_English_Version_20190311-1.json")
         print(f"Using file path: {file_path}")
         with open(file_path, 'r', encoding='utf-8') as f:
             json_chunks = json.load(f)
@@ -120,15 +125,16 @@ def store_embeddings_in_db(file_path, collection_name, client, model, tokenizer,
     processed_chunks = process_json_chunks(json_chunks)
     print(f"Total number of chunks: {len(processed_chunks)}")
 
-    bert_embeddings, tfidf_embeddings, processed_texts = create_hybrid_embeddings(processed_chunks, model, tokenizer, tfidf_vectorizer, collection_name=collection_name)
-    print(f"Created BERT embeddings with shape: {bert_embeddings.shape}")
+    sentence_embeddings, tfidf_embeddings, processed_texts = create_hybrid_embeddings(processed_chunks, model,  tfidf_vectorizer, collection_name=collection_name)
+    print(f"Created BERT embeddings with shape: {sentence_embeddings.shape}")
     print(f"Created TF-IDF embeddings with shape: {tfidf_embeddings.shape}")
+
     
     # Create Qdrant collection with correct size for BERT embeddings
     client.create_collection(
         collection_name=collection_name,
         vectors_config=VectorParams(
-            size=768,  # BERT embedding size
+            size=sentence_embeddings.shape[1],  
             distance=Distance.COSINE
         )
     )
@@ -138,16 +144,16 @@ def store_embeddings_in_db(file_path, collection_name, client, model, tokenizer,
     points = [
         PointStruct(
             id=int(doc['section_num']),
-            vector=bert_embedding.tolist(),
+            vector=sentence_embedding.tolist(),
             payload={
                 'section_num': doc['section_num'],
                 'title': doc['title'],
                 'content': doc['content'],
-                'tfidf_vector': tfidf_embedding.toarray().tolist()  # Convert TF-IDF sparse matrix to list
+                'tfidf_vector': tfidf_embedding.toarray().tolist()[0]  # Convert TF-IDF sparse matrix to list
             }
         )
-        for doc, bert_embedding, tfidf_embedding 
-        in zip(processed_chunks, bert_embeddings, tfidf_embeddings)
+        for doc, sentence_embedding, tfidf_embedding 
+        in zip(processed_chunks, sentence_embeddings, tfidf_embeddings)
     ]
     print(f"Prepared {len(points)} points for upsert")
     

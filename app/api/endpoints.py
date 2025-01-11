@@ -1,14 +1,18 @@
-from fastapi import APIRouter, HTTPException, UploadFile, File
+from fastapi import APIRouter, HTTPException, Path, Query, UploadFile, File
 from typing import List, Optional
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 from app.services.embeddings import create_bert_embeddings, create_tfidf_embeddings, create_hybrid_embeddings, store_embeddings_in_db
 from app.services.qdrant_client_init import get_qdrant_client
 from models.models_init import init_models
-from app.services.retrival import hybrid_retriever
+from app.services.retrival import hybrid_retriever, hybrid_retriever_reranked
 from app.services.llm_prompt import get_answer
 router = APIRouter()
+import logging
+# Set up logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
-model, tokenizer, tfidf_vectorizer = init_models()
+model, tfidf_vectorizer = init_models()
 client = get_qdrant_client()
 
 
@@ -60,7 +64,6 @@ async def legal_document_query(request: TestRequest):
             collection_name=request.collection_name,
             client=client,
             model=model,
-            tokenizer=tokenizer,
             tfidf_vectorizer=tfidf_vectorizer
         )
         print('stored in db')
@@ -74,40 +77,73 @@ async def legal_document_query(request: TestRequest):
         raise HTTPException(status_code=500, detail=str(e))
     
 
-class QueryRequest(BaseModel):
-    question: str
-    act_name: str
-    collection_name: str
-    context_documents: List[str]
+class ChunkInfo(BaseModel):
+    content: str = Field(..., description="Content of the document chunk")
+    section_num: str = Field(..., description="Section number of the document chunk")
+    title: str = Field(..., description="Title of the section")
+    schemantic_similarity: float = Field(..., description="Schemantic similarity score")
+    tfidf_similarity: float = Field(..., description="TF-IDF similarity score")
+    combined_similarity: float = Field(..., description="Combined similarity score")
+    collection_name: str = Field(..., description="ID of the source document")
 
 class QueryResponse(BaseModel):
-    answer: List
+    answer: str = Field(..., description="LLM-generated answer")
+    collection_name: str = Field(..., description="Document ID that was queried")
+    referenced_chunks: List[ChunkInfo] = Field(..., description="Source chunks used for the answer")
+    confidence_score: float = Field(..., description="Overall confidence score for the answer")
+
 
 
 
 
 @router.post("/query", response_model=QueryResponse)
-async def legal_document_query(request: QueryRequest):
+async def legal_document_query(      
+    collection_name: str,
+    question: str = Query(..., description="Question to ask about the document")):
     """
     Query legal documents with retrieval-augmented generation
     """
     try:
        
-        result = hybrid_retriever(
+        results = hybrid_retriever_reranked(
            client=client,
-           collection_name=request.collection_name,
-           query=request.question,
+           collection_name=collection_name,
+           query=question,
            model=model,
-           tokenizer=tokenizer,
            tfidf_vectorizer=tfidf_vectorizer,
         )
-        
+        if not results:
+            return QueryResponse(
+                answer="No relevant information found in this document.",
+                collection_name=collection_name,
+                referenced_chunks=[],
+                confidence_score=0.0
+            )
+        chunks = [
+            ChunkInfo(
+                content=result['content'],
+                section_num=result['section_num'],
+                title=result['title'],
+                schemantic_similarity=result['schemantic_similarity'],
+                tfidf_similarity=result['tfidf_similarity'],
+                combined_similarity=result['combined_similarity'],
+                collection_name=collection_name,
+               
+            )
+            for result in results
+        ]
 
-        response = QueryResponse(
-            answer=result,
-            
+        documents = [chunk.content for chunk in chunks]
+        llm_answer = get_answer(question, documents)
+
+        confidence_score = sum(r['combined_similarity'] for r in results) / len(results)
+
+        return QueryResponse(
+            answer=llm_answer,
+            collection_name=collection_name,
+            referenced_chunks=chunks,
+            confidence_score=confidence_score
         )
-        return response
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
     

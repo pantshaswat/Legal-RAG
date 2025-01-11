@@ -1,15 +1,18 @@
 import getpass
 from langchain_google_genai import ChatGoogleGenerativeAI
 import os
+from dotenv import load_dotenv
+load_dotenv()
 
 def setup_google_api():
     
     os.environ["GOOGLE_API_KEY"] = getpass.getpass("gemini-api-key")
 
+
 def get_query_expansion(user_query):
-   
+    GOOGLE_API_KEY = os.getenv('GOOGLE_API_KEY')
     llm = ChatGoogleGenerativeAI(
-        api_key="",
+        api_key=GOOGLE_API_KEY,
         model="gemini-1.5-pro",
         temperature=0,
         max_tokens=None,

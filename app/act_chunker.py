@@ -14,7 +14,7 @@ def split_into_smaller_chunks(text: str, max_words: int = 250) -> list:
         list: List of text chunks
     """
     # Split the text into sentences (assuming sentences end with . ? or !)
-    sentences = re.split('(?<=[.!?])\s+', text)
+    sentences = re.split(r'(?<=[.!?])\s+', text)
     
     chunks = []
     current_chunk = []
@@ -64,7 +64,7 @@ def chunk_legal_text(text: str, max_words: int = 250):
         if match:
             # Save previous chunk if it exists
             if current_chunk is not None:
-                full_content = '\n'.join(current_content).strip()
+                full_content = ' '.join(current_content).strip()
                 
                 # Check if content needs to be split
                 word_count = len(full_content.split())
@@ -92,7 +92,7 @@ def chunk_legal_text(text: str, max_words: int = 250):
     
     # Save the last chunk
     if current_chunk is not None:
-        full_content = '\n'.join(current_content).strip()
+        full_content = ' '.join(current_content).strip()
         
         # Check if content needs to be split
         word_count = len(full_content.split())
@@ -122,6 +122,10 @@ def process_pdf_to_chunks(filename: str, output_dir: str = '../data/processed/js
     # Create chunks
     chunks = chunk_legal_text(text)
     
+    # Remove \n characters from content
+    for chunk in chunks:
+        chunk['content'] = [content.replace('\n', '') for content in chunk['content']]
+    
     # Save as JSON
     output_path = f'{output_dir}/{filename}.json'
     with open(output_path, 'w') as f:
@@ -132,5 +136,5 @@ def process_pdf_to_chunks(filename: str, output_dir: str = '../data/processed/js
 
 # Example usage
 if __name__ == "__main__":
-    filename = 'Patent Design and Trademark Act'
+    filename = 'THE FINANCIAL PROCEDURES AND  FISCAL RESPONSIBILITY REGULATIONS, 2077'
     process_pdf_to_chunks(filename)
