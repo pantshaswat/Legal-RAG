@@ -89,7 +89,8 @@ class QueryResponse(BaseModel):
     collection_name: str = Field(..., description="Document ID that was queried")
     referenced_chunks: List[ChunkInfo] = Field(..., description="Source chunks used for the answer")
     confidence_score: float = Field(..., description="Overall confidence score for the answer")
-
+    mrr: Optional[float] = None
+    map: Optional[float] = None
 
 
 
@@ -99,22 +100,22 @@ async def legal_document_query(
     collection_name: str,
     file_name: str,
     question: str = Query(..., description="Question to ask about the document")):
-    """
-    Query legal documents with retrieval-augmented generation
-    """
+    
     file_path = os.path.abspath(f"../data/processed/json/Finance/{file_name}.json")
+    eval_data_path = os.path.abspath("../evaluation/relevantSection.json")
 
     try:
-       
+        # Retrieve relevant chunks
         results = hybrid_retriever_reranked(
-           client=client,
-           collection_name=collection_name,
-           query=question,
-           top_k= 3,
-           sections_json_path=file_path,
-           model=model,
-           tfidf_vectorizer=tfidf_vectorizer,
+            client=client,
+            collection_name=collection_name,
+            query=question,
+            top_k=3,
+            sections_json_path=file_path,
+            model=model,
+            tfidf_vectorizer=tfidf_vectorizer,
         )
+
         if not results:
             return QueryResponse(
                 answer="No relevant information found in this document.",
@@ -122,6 +123,8 @@ async def legal_document_query(
                 referenced_chunks=[],
                 confidence_score=0.0
             )
+
+        # Format retrieved chunks
         chunks = [
             ChunkInfo(
                 content=result['content'],
@@ -131,25 +134,65 @@ async def legal_document_query(
                 tfidf_similarity=result['tfidf_similarity'],
                 combined_similarity=result['combined_similarity'],
                 collection_name=collection_name,
-               
             )
             for result in results
         ]
 
         documents = [chunk.content for chunk in chunks]
         llm_answer = get_answer(question, documents)
-
         confidence_score = sum(r['combined_similarity'] for r in results) / len(results)
 
-        return QueryResponse(
+        # Load evaluation JSON and check for question match
+        try:
+            with open(eval_data_path, 'r', encoding='utf-8') as f:
+                eval_data = json.load(f)
+        except FileNotFoundError:
+            eval_data = []
+
+        mrr = None
+        map_score = None
+        for item in eval_data:
+            if item["question"].strip().lower() == question.strip().lower():
+                relevant = item["relevant_sections"]
+                retrieved = [res["section_num"] for res in results]
+
+                def calc_mrr(retrieved, relevant):
+                    for idx, sec in enumerate(retrieved, start=1):
+                        if sec in relevant:
+                            return 1 / idx
+                    return 0.0
+
+                def calc_map(retrieved, relevant):
+                    relevant_count = 0
+                    precision_at_k = []
+                    for k, doc in enumerate(retrieved, start=1):
+                        if doc in relevant:
+                            relevant_count += 1
+                            precision_at_k.append(relevant_count / k)
+                    return sum(precision_at_k) / len(relevant) if relevant else 0.0
+
+                mrr = calc_mrr(retrieved, relevant)
+                map_score = calc_map(retrieved, relevant)
+                break
+
+        # Add MRR and MAP if available
+        response = QueryResponse(
             answer=llm_answer,
             collection_name=collection_name,
             referenced_chunks=chunks,
-            confidence_score=confidence_score
+            confidence_score=confidence_score,
         )
+
+        # Optional: attach evaluation metrics in a custom key (or add them to QueryResponse model if preferred)
+        if mrr is not None and map_score is not None:
+            response = response.dict()
+            response.update({"mrr": mrr, "map": map_score})
+            return response
+
+        return response
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
-    
+  
 
 
 class EvaluationRequest(BaseModel):

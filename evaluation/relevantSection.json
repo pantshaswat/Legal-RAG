@@ -1,0 +1,23 @@
+
+[
+    {
+        "question": "What is the law for the formation of board of directors?",
+        "relevant_sections":["14", "29" ,"22"]
+    },
+    {
+        "question": "Can I use the name of bank for personal use?",
+        "relevant_sections":["32","34"]
+    },
+    {
+        "question":"What are the laws regarding classification and conversion of a bank?",
+        "relevant_sections":["36","37"]
+    },
+    {
+        "question":"What are the laws about banking liscence?",
+        "relevant_sections":["34","35"]
+    },
+    {
+        "question":"What are the provisions on credit?",
+        "relevant_sections":["55", "56"]
+    }
+]
