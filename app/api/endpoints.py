@@ -1,11 +1,14 @@
 from fastapi import APIRouter, HTTPException, Path, Query, UploadFile, File
 from typing import List, Optional
 from pydantic import BaseModel, Field
-from app.services.embeddings import create_bert_embeddings, create_tfidf_embeddings, create_hybrid_embeddings, store_embeddings_in_db
+# from app.services.embeddings import create_bert_embeddings, create_tfidf_embeddings, create_hybrid_embeddings, store_embeddings_in_db
+from app.services.nepali_embeddings import  store_embeddings_in_db
 from app.services.qdrant_client_init import get_qdrant_client
 from models.models_init import init_models
-from app.services.retrival import hybrid_retriever, hybrid_retriever_reranked
-from app.services.llm_prompt import get_answer
+# from app.services.retrival import hybrid_retriever, hybrid_retriever_reranked
+from app.services.nepali_retrival import hybrid_retriever, hybrid_retriever_reranked
+# from app.services.llm_prompt import get_answer
+from app.services.nepali_grokLlm import get_answer
 router = APIRouter()
 import logging
 # Set up logging
@@ -55,10 +58,11 @@ async def legal_document_query(request: TestRequest):
     Query legal documents with retrieval-augmented generation
     """
     try:
+        nepali_file_path = os.path.abspath(f"../data/nepali/processed/json/{request.file_name}.json")
         file_path = os.path.abspath(f"../data/processed/json/Finance/{request.file_name}.json")
         print('storing in db')
         store_embeddings_in_db(
-            file_path=file_path,
+            file_path=nepali_file_path,
             collection_name=request.collection_name,
             client=client,
             model=model,
@@ -101,6 +105,7 @@ async def legal_document_query(
     file_name: str,
     question: str = Query(..., description="Question to ask about the document")):
     
+    nepali_file_path = os.path.abspath(f"../data/nepali/processed/json/{file_name}.json")
     file_path = os.path.abspath(f"../data/processed/json/Finance/{file_name}.json")
     eval_data_path = os.path.abspath("../evaluation/relevantSection.json")
 
@@ -111,7 +116,7 @@ async def legal_document_query(
             collection_name=collection_name,
             query=question,
             top_k=3,
-            sections_json_path=file_path,
+            sections_json_path=nepali_file_path,
             model=model,
             tfidf_vectorizer=tfidf_vectorizer,
         )
