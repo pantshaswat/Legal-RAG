@@ -14,3 +14,5 @@ pymupdf
 python-dotenv
 sentence-transformers
 # "fastapi[standard]"
+pdf2image
+pytesseract
