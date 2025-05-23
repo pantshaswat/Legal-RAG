@@ -123,5 +123,5 @@ def process_nepali_pdf_to_chunks(filename: str, output_dir: str = '../../data/ne
 
 # Example usage
 if __name__ == "__main__":
-    filename = 'data_act_2080'
+    filename = 'patent-design-and-trademark-2022'
     process_nepali_pdf_to_chunks(filename, max_sections=32)  # example: only process first 50 sections

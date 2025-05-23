@@ -1,5 +1,4 @@
 import re
-from pypdf import PdfReader
 import json
 import os
 
@@ -40,11 +39,12 @@ def chunk_nepali_legal_text(text: str, max_sections: int = None):
     # Updated pattern to better capture section numbers and titles
     # This pattern looks for a number followed by a dot, then captures everything until
     # either a '।' (Nepali full-stop) or before content that looks like a new paragraph
-    section_pattern = r'(?P<section_num>\d+)\.\s+(?P<title>.*?)(?=\s+\d+\.|\s*।|\s*$)'
-    
+    section_pattern = r'(?P<section_num>\d+)\.\s+(?P<title>.+?[ः:])(?=\s+\d+\.|\s*।|\s*$)'
+
     # Alternative pattern to capture the title until a colon or specific Nepali characters
-    title_end_pattern = r'(?P<section_num>\d+)\.\s+(?P<title>.*?(?::|षाः|ः))\s+(?P<first_line>.*)'
-    
+    # Modified to handle spaces before colons
+    title_end_pattern = r'(?P<section_num>\d+)\.\s+(?P<title>.*?(?:\s*:|षाः|ः))\s+(?P<first_line>.*)'
+
     lines = [line.strip() for line in text.split('\n') if line.strip()]
     
     chunks = []
@@ -113,73 +113,33 @@ def chunk_nepali_legal_text(text: str, max_sections: int = None):
     
     return chunks
 
-def process_nepali_pdf_to_chunks(filename: str, output_dir: str = 'data/nepali/processed/json', max_sections: int = None):
+def process_extracted_text_to_chunks(filename: str, output_dir: str = 'data/nepali/processed/json', max_sections: int = None):
     """
-    Process a Nepali PDF file and save chunked content as JSON.
+    Process an already extracted text file and save chunked content as JSON.
     Each sentence in a section becomes its own chunk.
     """
     # Get the absolute path to the project root
     project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
     
     # Construct absolute paths
-    pdf_path = os.path.join(project_root, 'data', 'nepali', 'raw', f"{filename}.pdf")
+    text_path = os.path.join(project_root, 'data', 'nepali', 'processed', 'extracted', f"{filename}.txt")
     output_dir = os.path.join(project_root, output_dir)
-    extracted_dir = os.path.join(project_root, 'data', 'nepali', 'processed', 'extracted')
     
-    # Create directories if they don't exist
+    # Create output directory if it doesn't exist
     os.makedirs(output_dir, exist_ok=True)
-    os.makedirs(extracted_dir, exist_ok=True)
     
     try:
-        # Read PDF with error handling
-        print(f"Reading PDF from: {pdf_path}")
-        document = PdfReader(pdf_path)
-        
-        # Check if PDF is encrypted
-        if document.is_encrypted:
-            print("Warning: PDF is encrypted. Attempting to decrypt...")
-            try:
-                document.decrypt('')  # Try empty password
-            except:
-                print("Error: Could not decrypt PDF. Please check if the PDF is password protected.")
-                return
-        
-        text = ""
-        print(f"Total pages in PDF: {len(document.pages)}")
-        
-        # Extract text from each page with error handling
-        for i, page in enumerate(document.pages):
-            try:
-                page_text = page.extract_text()
-                if not page_text:
-                    print(f"Warning: No text extracted from page {i+1}")
-                    continue
-                text += page_text
-                print(f"Successfully extracted text from page {i+1}")
-            except Exception as e:
-                print(f"Error extracting text from page {i+1}: {str(e)}")
-                continue
+        # Read text file
+        print(f"Reading text file from: {text_path}")
+        with open(text_path, 'r', encoding='utf-8') as file:
+            text = file.read()
         
         if not text.strip():
-            print("Error: No text was extracted from the PDF")
+            print("Error: Text file is empty")
             return
             
-        # Save raw extracted text for debugging
-        raw_text_path = os.path.join(extracted_dir, f"{filename}_raw.txt")
-        with open(raw_text_path, 'w', encoding='utf-8') as file:
-            file.write(text)
-        print(f"Saved raw extracted text to: {raw_text_path}")
-        
-        # Remove unnecessary content like URLs (if any)
-        cleaned_text = re.sub(r'www\.[a-zA-Z0-9./]+', '', text)
-
-        # Save cleaned text
-        hello_txt_path = os.path.join(extracted_dir, f"{filename}.txt")
-        with open(hello_txt_path, 'w', encoding='utf-8') as file:
-            file.write(cleaned_text)
-        print(f"Saved cleaned text to: {hello_txt_path}")
-        
-        chunks = chunk_nepali_legal_text(cleaned_text, max_sections=max_sections)
+        # Process the text into chunks
+        chunks = chunk_nepali_legal_text(text, max_sections=max_sections)
 
         # Clean up any newlines within sentences
         for chunk in chunks:
@@ -195,10 +155,52 @@ def process_nepali_pdf_to_chunks(filename: str, output_dir: str = 'data/nepali/p
         print(f"Output saved to {output_path}")
         
     except Exception as e:
-        print(f"Error processing PDF: {str(e)}")
+        print(f"Error processing text file: {str(e)}")
         raise
+
+def process_all_extracted_files(input_dir: str = None, output_dir: str = None, max_sections: int = None):
+    """
+    Process all text files in the extracted directory.
+    """
+    # Get the absolute path to the project root
+    project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
+    
+    # Construct absolute paths
+    if input_dir is None:
+        input_dir = os.path.join(project_root, 'data', 'nepali', 'processed', 'extracted')
+    else:
+        input_dir = os.path.join(project_root, input_dir)
+        
+    if output_dir is None:
+        output_dir = os.path.join(project_root, 'data', 'nepali', 'processed', 'json')
+    else:
+        output_dir = os.path.join(project_root, output_dir)
+    
+    # Create output directory if it doesn't exist
+    os.makedirs(output_dir, exist_ok=True)
+    
+    # Get all text files in the input directory
+    files = [f for f in os.listdir(input_dir) if f.endswith('.txt') and not f.endswith('_raw.txt')]
+    
+    if not files:
+        print(f"No text files found in {input_dir}")
+        return
+    
+    print(f"Found {len(files)} text files to process")
+    
+    # Process each file
+    for file in files:
+        filename = os.path.splitext(file)[0]  # Remove the .txt extension
+        print(f"\nProcessing file: {filename}")
+        process_extracted_text_to_chunks(filename, output_dir=output_dir, max_sections=max_sections)
+    
+    print(f"\nAll files processed. Results saved to {output_dir}")
 
 # Example usage
 if __name__ == "__main__":
-    filename = 'patent-design-and-trademark-2022'
-    process_nepali_pdf_to_chunks(filename, max_sections=32)  # example: only process first 32 sections
+    # Process a single file
+    filename = 'bankoffence'
+    process_extracted_text_to_chunks(filename, max_sections=28)
+    
+    # Or process all files in the extracted directory
+    process_all_extracted_files(max_sections=None)  # Set to None to process all sections

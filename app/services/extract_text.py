@@ -30,7 +30,7 @@ def clean_nepali_text(text):
     return cleaned_text
 
 # Paths
-pdf_path = '../../data/nepali/raw/data_act_2080.pdf'  # Replace with your PDF file path
+pdf_path = '../../data/nepali/raw/bankoffence.pdf'  # Replace with your PDF file path
 output_folder = '../../data/nepali/processed/extracted'
 
 # Ensure output folder exists
